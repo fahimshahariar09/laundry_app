@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/constants/images.dart';
 import 'package:laundry/controller/ui_controller/splash/splash_screen.dart';
+import 'package:laundry/view/common_widget/common_button.dart';
+import 'package:laundry/view/common_widget/common_text.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -20,6 +22,8 @@ class SplashScreen extends StatelessWidget {
                   Image.asset(AppImages.splash,height: 150,width: 150,fit: BoxFit.cover,),
                   SizedBox(height: 10),
                   Text("Laundry App"),
+                  CommonText(titel: "titel"),
+                  CommonButton(buttonName: "buttonName", onTap: (){})
 
                 ],
               ),

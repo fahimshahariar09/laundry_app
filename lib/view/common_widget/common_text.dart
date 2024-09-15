@@ -24,7 +24,7 @@ class CommonText extends StatelessWidget {
       style: TextStyle(
           color: fColor ?? Colors.black,
           fontSize: fSize ?? 15,
-          fontWeight: fWeight ?? FontWeight.w500,
+          fontWeight: fWeight ?? FontWeight.normal,
           overflow: overflow ?? TextOverflow.ellipsis),
       maxLines: maxLine ?? 1,
     );
