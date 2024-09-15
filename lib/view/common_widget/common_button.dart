@@ -25,7 +25,7 @@ class CommonButton extends StatelessWidget {
         height: buttonHeight ?? 50,
         width: buttonWidth ?? MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(15),
           color: buttonColor ?? Colors.blue,
 
         ),

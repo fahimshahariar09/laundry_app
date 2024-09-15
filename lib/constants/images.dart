@@ -1,5 +1,5 @@
 
 class AppImages{
 
-  static String splash ='assets/images/laundry.png';
+  static String splash ='assets/images/laundrys.png';
 }
