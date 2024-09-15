@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/auth/sign_in.dart';
 import 'package:laundry/view/common_widget/common_button.dart';
+import 'package:laundry/view/common_widget/common_loading_button.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/auth/widget/email_text_field.dart';
 import 'package:laundry/view/screen/auth/widget/password_text_field.dart';
@@ -31,12 +34,18 @@ class SignIn extends StatelessWidget {
                 PasswordTextField(
                     passController: signInController.passwordController),
                 SizedBox(height: 20),
-                CommonButton(buttonName: "Sign In", onTap: () {
-                  if(signInController.formKey.currentState!.validate()){
-                    return ;
-                  }
-                  signInController.signinFun();
-                })
+                Obx(() => signInController.isLoading.isFalse
+                    ? CommonButton(
+                        buttonName: "Sign In",
+                        onTap: () {
+                          if (!signInController.formKey.currentState!
+                              .validate()) {
+                            return;
+                          }
+                          signInController.signinFun();
+                          log("............message..............");
+                        })
+                    : CommonLoadingButton()),
               ],
             ),
           ),

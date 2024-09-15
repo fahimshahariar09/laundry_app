@@ -12,9 +12,11 @@ class CommonLoadingButton extends StatelessWidget {
     return SizedBox(
       height: buttonHeight ?? 50,
       width: buttonWidth ?? MediaQuery.sizeOf(context).width,
-      child: CircularProgressIndicator(
-        backgroundColor: Colors.orange,
-        color: Colors.black,
+      child: Center(
+        child: CircularProgressIndicator(
+          backgroundColor: Colors.orange,
+          color: Colors.black,
+        ),
       ),
     );
   }
