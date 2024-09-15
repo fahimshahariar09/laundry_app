@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
-class PassTextField extends StatelessWidget {
-  const PassTextField({super.key});
+class PasswordTextField extends StatelessWidget {
+  const PasswordTextField({super.key, required this.passController});
+
+  final TextEditingController passController;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: passController,
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
