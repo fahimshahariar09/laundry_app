@@ -8,13 +8,16 @@ class CommonButton extends StatelessWidget {
       this.buttonColor,
       this.textColor,
       this.buttonHeight,
-      this.buttonWidth, required this.onTap});
+      this.buttonWidth,
+      required this.onTap,
+      this.buttonBorder});
 
   final String buttonName;
   final Color? buttonColor;
   final Color? textColor;
   final double? buttonHeight;
   final double? buttonWidth;
+  final Border? buttonBorder;
   final VoidCallback onTap;
 
   @override
@@ -25,14 +28,15 @@ class CommonButton extends StatelessWidget {
         height: buttonHeight ?? 50,
         width: buttonWidth ?? MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(20),
+          border: buttonBorder ?? Border.all(color: Colors.blue, width: 2),
           color: buttonColor ?? Colors.blue,
-
         ),
         child: Center(
           child: CommonText(
             titel: buttonName,
-            fColor: textColor ?? Colors.black,
+            fColor: textColor ?? Colors.white,
+            fSize: 18,
           ),
         ),
       ),
