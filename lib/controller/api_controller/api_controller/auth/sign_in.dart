@@ -11,7 +11,7 @@ class SignInService {
     } catch (e) {
       log("error :$e");
     }
-    Get.snackbar("message", "Something went wrong");
+    Get.snackbar("message", "FAILED");
     return false;
   }
 }

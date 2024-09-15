@@ -24,19 +24,17 @@ class CommonButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Container(
-        height: buttonHeight ?? 50,
-        width: buttonWidth ?? MediaQuery.sizeOf(context).width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          border: buttonBorder ?? Border.all(color: Colors.blue, width: 2),
-          color: buttonColor ?? Colors.blue,
-        ),
-        child: Center(
-          child: CommonText(
-            titel: buttonName,
-            fColor: textColor ?? Colors.white,
-            fSize: 18,
+      child: Card(
+        color: buttonColor ?? Colors.blue,
+        child: SizedBox(
+          height: buttonHeight ?? 50,
+          width: buttonWidth ?? MediaQuery.sizeOf(context).width,
+          child: Center(
+            child: CommonText(
+              titel: buttonName,
+              fColor: textColor ?? Colors.white,
+              fSize: 18,
+            ),
           ),
         ),
       ),
