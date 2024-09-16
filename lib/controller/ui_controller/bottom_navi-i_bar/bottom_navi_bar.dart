@@ -3,7 +3,9 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:laundry/view/screen/auth/sign_up.dart';
+import 'package:laundry/view/screen/cart_screen/cart_screen%20.dart';
+import 'package:laundry/view/screen/home_screen/home_screen.dart';
+import 'package:laundry/view/screen/profile/profile_screen.dart';
 
 class BottomNaviBarController extends GetxController{
 
@@ -20,7 +22,9 @@ class BottomNaviBarController extends GetxController{
   }
 
   RxList<Widget> bottomBarPage = [
-    SignUp(),
+    HomeScreen(),
+    CartScreen(),
+    ProfileScreen(),
   ].obs;
 
 }

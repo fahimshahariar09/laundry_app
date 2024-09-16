@@ -38,8 +38,8 @@ class BottomNaviBar extends StatelessWidget {
               elevation: 1,
 
         bottomBarItems: [
-          buildBottomBarItem(icon: Icons.home, label: "home"),
-          buildBottomBarItem(icon: Icons.category, label: "category"),
+          buildBottomBarItem(icon: Icons.category, label: "Category"),
+          buildBottomBarItem(icon: Icons.home, label: "Home"),
           buildBottomBarItem(icon: Icons.person, label: "profile"),
         ], onTap: (index) {
                 bottomNaviBarController.pageController.jumpToPage(index);

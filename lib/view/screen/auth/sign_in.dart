@@ -10,6 +10,7 @@ import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/auth/sign_up.dart';
 import 'package:laundry/view/screen/auth/widget/email_text_field.dart';
 import 'package:laundry/view/screen/auth/widget/password_text_field.dart';
+import 'package:laundry/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -60,6 +61,7 @@ class SignIn extends StatelessWidget {
                               return;
                             }
                             signInController.signinFun();
+                            Get.to(BottomNaviBar());
                           })
                       : const CommonLoadingButton()),
                   const SizedBox(height: 20),
