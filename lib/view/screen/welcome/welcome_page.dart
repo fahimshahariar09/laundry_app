@@ -22,9 +22,9 @@ class WelcomePage extends StatelessWidget {
                   width: 200,
                   fit: BoxFit.cover,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 CommonButton(buttonName: "Create account", onTap: () {}),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 CommonButton(
                     buttonName: "Sign In",
                     buttonColor: Colors.white,

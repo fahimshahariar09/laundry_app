@@ -22,9 +22,9 @@ class SignIn extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Form(
-            key: signInController.formKey,
-            child: SingleChildScrollView(
+          child: SingleChildScrollView(
+            child: Form(
+              key: signInController.formKey,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -59,7 +59,6 @@ class SignIn extends StatelessWidget {
                               return;
                             }
                             signInController.signinFun();
-                            log("............message..............");
                           })
                       : CommonLoadingButton()),
                   SizedBox(height: 20),
@@ -125,7 +124,7 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10
                   ),
                   Image.asset(
                     AppImages.splash,
@@ -147,7 +146,7 @@ class SignIn extends StatelessWidget {
                         fColor: Colors.blue,
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
