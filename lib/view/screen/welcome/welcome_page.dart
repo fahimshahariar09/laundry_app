@@ -27,7 +27,7 @@ class WelcomePage extends StatelessWidget {
                   width: 200,
                   fit: BoxFit.cover,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 const CommonText(titel: "Laundry App",fSize: 20,fWeight: FontWeight.w600,fColor: Color(0xffF5F5F5),),
                 const SizedBox(height: 20),
                 CommonButton(buttonName: "Create account", onTap: () {Get.to(const SignUp());}),
