@@ -62,7 +62,7 @@ class SignUp extends StatelessWidget {
                             log("..........................");
                           })
                       : CommonLoadingButton()),
-                  SizedBox(height: 20),
+                  SizedBox(height: 15),
                   Text("OR"),
                   SizedBox(height: 15),
                   Row(
@@ -72,7 +72,7 @@ class SignUp extends StatelessWidget {
                       Row(
                         children: [
                           SizedBox(
-                            height: 80,
+                            height: 70,
                             width: 90,
                             child: Column(
                               children: [
@@ -89,7 +89,7 @@ class SignUp extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 80,
+                            height: 70,
                             width: 90,
                             child: Column(
                               children: [
@@ -105,7 +105,7 @@ class SignUp extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 80,
+                            height: 70,
                             width: 70,
                             child: Column(
                               children: [
@@ -124,14 +124,14 @@ class SignUp extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  //SizedBox(height: 10),
                   Image.asset(
                     AppImages.splash,
-                    height: 150,
-                    width: 150,
+                    height: 130,
+                    width: 130,
                     fit: BoxFit.cover,
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -141,7 +141,7 @@ class SignUp extends StatelessWidget {
                         fWeight: FontWeight.w400,
                       ),
                       CommonText(
-                        titel: "Sign Up",
+                        titel: "Sign In",
                         fColor: Colors.blue,
                       ),
                     ],
