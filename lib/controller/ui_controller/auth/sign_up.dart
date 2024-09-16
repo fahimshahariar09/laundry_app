@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:laundry/controller/api_controller/api_controller/auth/sign_in.dart';
 import 'package:laundry/controller/api_controller/api_controller/auth/sign_up.dart';
 
 class SignUpController extends GetxController {

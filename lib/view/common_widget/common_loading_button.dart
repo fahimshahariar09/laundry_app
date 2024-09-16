@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CommonLoadingButton extends StatelessWidget {
@@ -12,7 +11,7 @@ class CommonLoadingButton extends StatelessWidget {
     return SizedBox(
       height: buttonHeight ?? 50,
       width: buttonWidth ?? MediaQuery.sizeOf(context).width,
-      child: Center(
+      child: const Center(
         child: CircularProgressIndicator(
           backgroundColor: Colors.orange,
           color: Colors.black,

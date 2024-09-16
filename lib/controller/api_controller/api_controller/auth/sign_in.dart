@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:get/get.dart';
 
 class SignInService {
   static Future<bool> signinService({required String email,required String password,}) async {

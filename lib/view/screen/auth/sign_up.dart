@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,28 +27,30 @@ class SignUp extends StatelessWidget {
               key: signUpController.formKey,
               child: Column(
                 children: [
-                  SizedBox(height: 15),
-                  CommonText(titel: "Sign Up", fSize: 20, fColor: Colors.white),
-                  SizedBox(height: 20),
-                  NameTextField(nameController: signUpController.nameController),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
+                  const CommonText(
+                      titel: "Sign Up", fSize: 20, fColor: Colors.white),
+                  const SizedBox(height: 20),
+                  NameTextField(
+                      nameController: signUpController.nameController),
+                  const SizedBox(height: 15),
                   EmailTextField(
                     emailController: signUpController.emailController,
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   PasswordTextField(
                     passController: signUpController.passwordController,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.visibility,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   SamePassTextField(
                     conframpasswordController:
                         signUpController.conframpasswordController,
-                    icon: Icon(Icons.visibility),
+                    icon: const Icon(Icons.visibility),
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Obx(() => signUpController.isLoading.isFalse
                       ? CommonButton(
                           buttonName: "Sign Up",
@@ -59,12 +60,11 @@ class SignUp extends StatelessWidget {
                               return;
                             }
                             signUpController.signupFun();
-                            log("..........................");
                           })
-                      : CommonLoadingButton()),
-                  SizedBox(height: 15),
-                  Text("OR"),
-                  SizedBox(height: 15),
+                      : const CommonLoadingButton()),
+                  const SizedBox(height: 15),
+                  const Text("OR"),
+                  const SizedBox(height: 15),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -80,8 +80,8 @@ class SignUp extends StatelessWidget {
                                   backgroundImage:
                                       AssetImage(AppIcon.instagram),
                                 ),
-                                SizedBox(height: 3),
-                                Text(
+                                const SizedBox(height: 3),
+                                const Text(
                                   "Instagram",
                                   style: TextStyle(color: Colors.blue),
                                 ),
@@ -96,8 +96,8 @@ class SignUp extends StatelessWidget {
                                 CircleAvatar(
                                   backgroundImage: AssetImage(AppIcon.facebook),
                                 ),
-                                SizedBox(height: 3),
-                                Text(
+                                const SizedBox(height: 3),
+                                const Text(
                                   "Facebook",
                                   style: TextStyle(color: Colors.blue),
                                 ),
@@ -112,8 +112,8 @@ class SignUp extends StatelessWidget {
                                 CircleAvatar(
                                   backgroundImage: AssetImage(AppIcon.twitter),
                                 ),
-                                SizedBox(height: 3),
-                                Text(
+                                const SizedBox(height: 3),
+                                const Text(
                                   "Twitter",
                                   style: TextStyle(color: Colors.blue),
                                 ),
@@ -131,8 +131,8 @@ class SignUp extends StatelessWidget {
                     width: 130,
                     fit: BoxFit.cover,
                   ),
-                  SizedBox(height: 15),
-                  Row(
+                  const SizedBox(height: 15),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CommonText(

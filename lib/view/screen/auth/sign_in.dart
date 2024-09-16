@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,27 +28,27 @@ class SignIn extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 20),
-                  CommonText(titel: "Sign In", fSize: 20, fColor: Colors.white),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 20),
+                  const CommonText(titel: "Sign In", fSize: 20, fColor: Colors.white),
+                  const SizedBox(height: 50),
                   EmailTextField(
                     emailController: signInController.emailController,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   PasswordTextField(
                     passController: signInController.passwordController,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.visibility,
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Row(
+                  const SizedBox(height: 10),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text("Forget Password?"),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Obx(() => signInController.isLoading.isFalse
                       ? CommonButton(
                           buttonName: "Sign In",
@@ -60,10 +59,10 @@ class SignIn extends StatelessWidget {
                             }
                             signInController.signinFun();
                           })
-                      : CommonLoadingButton()),
-                  SizedBox(height: 20),
-                  Text("OR"),
-                  SizedBox(height: 20),
+                      : const CommonLoadingButton()),
+                  const SizedBox(height: 20),
+                  const Text("OR"),
+                  const SizedBox(height: 20),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -79,8 +78,8 @@ class SignIn extends StatelessWidget {
                                   backgroundImage:
                                       AssetImage(AppIcon.instagram),
                                 ),
-                                SizedBox(height: 3),
-                                Text(
+                                const SizedBox(height: 3),
+                                const Text(
                                   "Instagram",
                                   style: TextStyle(color: Colors.blue),
                                 ),
@@ -95,8 +94,8 @@ class SignIn extends StatelessWidget {
                                 CircleAvatar(
                                   backgroundImage: AssetImage(AppIcon.facebook),
                                 ),
-                                SizedBox(height: 3),
-                                Text(
+                                const SizedBox(height: 3),
+                                const Text(
                                   "Facebook",
                                   style: TextStyle(color: Colors.blue),
                                 ),
@@ -111,8 +110,8 @@ class SignIn extends StatelessWidget {
                                 CircleAvatar(
                                   backgroundImage: AssetImage(AppIcon.twitter),
                                 ),
-                                SizedBox(height: 3),
-                                Text(
+                                const SizedBox(height: 3),
+                                const Text(
                                   "Twitter",
                                   style: TextStyle(color: Colors.blue),
                                 ),
@@ -123,7 +122,7 @@ class SignIn extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10
                   ),
                   Image.asset(
@@ -132,8 +131,8 @@ class SignIn extends StatelessWidget {
                     width: 150,
                     fit: BoxFit.cover,
                   ),
-                  SizedBox(height: 20),
-                  Row(
+                  const SizedBox(height: 20),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CommonText(
