@@ -7,6 +7,7 @@ import 'package:laundry/controller/ui_controller/auth/sign_up.dart';
 import 'package:laundry/view/common_widget/common_button.dart';
 import 'package:laundry/view/common_widget/common_loading_button.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
+import 'package:laundry/view/screen/auth/sign_in.dart';
 import 'package:laundry/view/screen/auth/widget/email_text_field.dart';
 import 'package:laundry/view/screen/auth/widget/name_text_field.dart';
 import 'package:laundry/view/screen/auth/widget/password_text_field.dart';
@@ -19,7 +20,8 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     SignUpController signUpController = Get.put(SignUpController());
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: const Color(0xff6DA0C2),
+      //backgroundColor: Colors.grey,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -83,7 +85,7 @@ class SignUp extends StatelessWidget {
                                 const SizedBox(height: 3),
                                 const Text(
                                   "Instagram",
-                                  style: TextStyle(color: Colors.blue),
+                                  style: TextStyle(color: Colors.black),
                                 ),
                               ],
                             ),
@@ -99,7 +101,7 @@ class SignUp extends StatelessWidget {
                                 const SizedBox(height: 3),
                                 const Text(
                                   "Facebook",
-                                  style: TextStyle(color: Colors.blue),
+                                  style: TextStyle(color: Colors.black),
                                 ),
                               ],
                             ),
@@ -115,7 +117,7 @@ class SignUp extends StatelessWidget {
                                 const SizedBox(height: 3),
                                 const Text(
                                   "Twitter",
-                                  style: TextStyle(color: Colors.blue),
+                                  style: TextStyle(color: Colors.black),
                                 ),
                               ],
                             ),
@@ -132,17 +134,22 @@ class SignUp extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                   const SizedBox(height: 15),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CommonText(
+                      const CommonText(
                         titel: "Don't have an Account? ",
                         fColor: Colors.white,
                         fWeight: FontWeight.w400,
                       ),
-                      CommonText(
-                        titel: "Sign In",
-                        fColor: Colors.blue,
+                      GestureDetector(
+                        onTap: (){
+                          Get.to(const SignIn());
+                        },
+                        child: const CommonText(
+                          titel: "Sign In",
+                          fColor: Colors.black,
+                        ),
                       ),
                     ],
                   )

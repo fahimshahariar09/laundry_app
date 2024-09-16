@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:laundry/view/screen/auth/sign_up.dart';
+import 'package:laundry/view/screen/splash/splash_screen.dart';
 
 void main(){
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUp(),
+      home: SplashScreen(),
     );
   }
 }
