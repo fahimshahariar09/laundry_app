@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatelessWidget {
-  const PasswordTextField({super.key, required this.passController});
+  const PasswordTextField({super.key, required this.passController, this.icon});
 
   final TextEditingController passController;
+  final Icon? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class PasswordTextField extends StatelessWidget {
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Colors.red,width: 1),
+          borderSide: const BorderSide(color: Colors.red, width: 1),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
@@ -24,9 +25,10 @@ class PasswordTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         labelText: "Password",
+        suffixIcon: icon ?? Icon(Icons.visibility),
       ),
-      validator: (value){
-        if(value ==''|| value == null){
+      validator: (value) {
+        if (value == '' || value == null) {
           return "Password can't be empty";
         }
         return null;

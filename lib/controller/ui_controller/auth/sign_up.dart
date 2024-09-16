@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:laundry/controller/api_controller/api_controller/auth/sign_in.dart';
 import 'package:laundry/controller/api_controller/api_controller/auth/sign_up.dart';
 
-class SignInController extends GetxController {
+class SignUpController extends GetxController {
   final formKey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
@@ -11,7 +11,7 @@ class SignInController extends GetxController {
   TextEditingController conframpasswordController = TextEditingController();
   RxBool isLoading = false.obs;
 
-  signinFun() async {
+  signupFun() async {
     isLoading.value = true;
     bool status = await SignUpService.signupService(
       name: nameController.text,

@@ -37,7 +37,11 @@ class SignIn extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   PasswordTextField(
-                      passController: signInController.passwordController),
+                    passController: signInController.passwordController,
+                    icon: Icon(
+                      Icons.visibility,
+                    ),
+                  ),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -120,8 +124,15 @@ class SignIn extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10,),
-                  Image.asset(AppImages.splash,height: 150,width: 150,fit: BoxFit.cover,),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Image.asset(
+                    AppImages.splash,
+                    height: 150,
+                    width: 150,
+                    fit: BoxFit.cover,
+                  ),
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
