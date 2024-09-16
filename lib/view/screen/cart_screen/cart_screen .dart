@@ -9,6 +9,6 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Cart Screen"),
       ),
-    );
+     );
   }
 }

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:laundry/view/screen/home_screen/home_screen.dart';
 import 'package:laundry/view/screen/splash/splash_screen.dart';
 
 void main(){
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: HomeScreen(),
     );
   }
 }
