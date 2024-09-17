@@ -8,7 +8,7 @@ class HomeScreenService {
   static Future<List<HomeListModel>> homescreenService() async {
     try {
       List<HomeListModel> data =[];
-      for(var i in HomeList.homeList['homeList'].toList()){
+      for(var i in HomeList.homeList['homelist'].toList()){
         var decodeData = HomeListModel.formJson(jsonDecode(jsonEncode(i)));
         data.add(decodeData);
       }
