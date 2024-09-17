@@ -12,18 +12,16 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // SingleChildScrollView(
-          //   child: Row(
-          //     children: [
-          //       ListView.builder(itemBuilder: (context, index) {
-          //         return Card(
-          //           child: ,
-          //         );
-          //       })
-          //     ],
-          //   ),
-          // )
-          Image.asset(AppIcon.dry),
+          SingleChildScrollView(
+            child: Row(
+              children: [
+                ListView.builder(itemBuilder: (context, index) {
+                  return Card(
+                  );
+                })
+              ],
+            ),
+          )
         ],
       ),
     );
