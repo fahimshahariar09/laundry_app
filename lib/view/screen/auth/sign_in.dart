@@ -7,6 +7,7 @@ import 'package:laundry/controller/ui_controller/auth/sign_in.dart';
 import 'package:laundry/view/common_widget/common_button.dart';
 import 'package:laundry/view/common_widget/common_loading_button.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
+import 'package:laundry/view/screen/auth/forget_password.dart';
 import 'package:laundry/view/screen/auth/sign_up.dart';
 import 'package:laundry/view/screen/auth/widget/email_text_field.dart';
 import 'package:laundry/view/screen/auth/widget/password_text_field.dart';
@@ -45,10 +46,14 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text("Forget Password?"),
+                      InkWell(
+                          onTap: (){
+                            Get.to(ForgetPassword());
+                          },
+                          child: const Text("Forget Password?")),
                     ],
                   ),
                   const SizedBox(height: 15),
