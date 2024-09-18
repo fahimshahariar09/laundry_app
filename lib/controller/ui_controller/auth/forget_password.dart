@@ -21,5 +21,10 @@ class ForgetPasswordController extends GetxController{
     emailController.text ="fahim@gmail.com";
     super.onInit();
   }
+@override
+  void dispose() {
+  emailController.dispose();
+    super.dispose();
+  }
 
 }
