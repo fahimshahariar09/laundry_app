@@ -18,43 +18,49 @@ class ForgetPassword extends StatelessWidget {
       appBar: AppBar(
         title: Text("forget password"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: 40),
-            Image.asset(
-              AppImages.forget,
-              height: 300,
-              width: 300,
-            ),
-            SizedBox(height: 10),
-            Row(
-              children: [
-                CommonText(
-                  titel: "Forget Password?",
-                  fWeight: FontWeight.w600,
-                  fSize: 18,
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Text(
-                "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
-            SizedBox(
-              height: 20,
-            ),
-            EmailTextField(
-              emailController: forgetPasswordController.emailController,
-            ),
-            SizedBox(height: 15),
-            CommonButton(buttonName: "Send Otp", onTap: (){
-              forgetPasswordController.forgetpassFun();
-              Get.to( Verification());
-            })
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 40),
+              Image.asset(
+                AppImages.forget,
+                height: 300,
+                width: 300,
+              ),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  CommonText(
+                    titel: "Forget Password?",
+                    fWeight: FontWeight.w600,
+                    fSize: 18,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Text(
+                  "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
+              SizedBox(
+                height: 20,
+              ),
+              EmailTextField(
+                emailController: forgetPasswordController.emailController,
+              ),
+              SizedBox(height: 15),
+              Obx(() => forgetPasswordController.isLoading.value
+                  ? CommonButton(
+                      buttonName: "Send Otp",
+                      onTap: () {
+                        forgetPasswordController.forgetpassFun();
+                        Get.to(Verification());
+                      })
+                  : CircularProgressIndicator()),
+            ],
+          ),
         ),
       ),
     );

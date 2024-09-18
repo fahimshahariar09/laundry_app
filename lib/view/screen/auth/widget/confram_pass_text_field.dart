@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SamePassTextField extends StatelessWidget {
-  const SamePassTextField({
+class ConframPassTextField extends StatelessWidget {
+  const ConframPassTextField({
     super.key,
     required this.conframpasswordController,
     this.icon,
@@ -28,7 +28,7 @@ class SamePassTextField extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        labelText: "Confram-Password",
+        labelText: "Confram Password",
         suffixIcon: icon ?? const Icon(Icons.visibility),
       ),
       validator: (value) {

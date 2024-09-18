@@ -11,7 +11,7 @@ import 'package:laundry/view/screen/auth/sign_in.dart';
 import 'package:laundry/view/screen/auth/widget/email_text_field.dart';
 import 'package:laundry/view/screen/auth/widget/name_text_field.dart';
 import 'package:laundry/view/screen/auth/widget/password_text_field.dart';
-import 'package:laundry/view/screen/auth/widget/same_pass_text_field.dart';
+import 'package:laundry/view/screen/auth/widget/confram_pass_text_field.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -47,7 +47,7 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  SamePassTextField(
+                  ConframPassTextField(
                     conframpasswordController:
                         signUpController.conframpasswordController,
                     icon: const Icon(Icons.visibility),

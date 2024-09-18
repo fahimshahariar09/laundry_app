@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatelessWidget {
-  const PasswordTextField({super.key, required this.passController, this.icon});
+  const PasswordTextField(
+      {super.key, required this.passController, this.icon,});
 
   final TextEditingController passController;
   final Icon? icon;
