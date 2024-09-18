@@ -16,7 +16,7 @@ class ForgetPassword extends StatelessWidget {
         Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("forget password"),
+        title: const Text("forget password"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -25,14 +25,14 @@ class ForgetPassword extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Image.asset(
                 AppImages.forget,
                 height: 300,
                 width: 300,
               ),
-              SizedBox(height: 10),
-              Row(
+              const SizedBox(height: 10),
+              const Row(
                 children: [
                   CommonText(
                     titel: "Forget Password?",
@@ -41,24 +41,24 @@ class ForgetPassword extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
-              Text(
+              const SizedBox(height: 10),
+              const Text(
                   "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               EmailTextField(
                 emailController: forgetPasswordController.emailController,
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Obx(() => forgetPasswordController.isLoading.value
                   ? CommonButton(
                       buttonName: "Send Otp",
                       onTap: () {
                         forgetPasswordController.forgetpassFun();
-                        Get.to(Verification());
+                        Get.to(const Verification());
                       })
-                  : CircularProgressIndicator()),
+                  : const CircularProgressIndicator()),
             ],
           ),
         ),

@@ -13,7 +13,7 @@ class BottomNaviBar extends StatelessWidget {
     return Scaffold(
       body: PageView(
         controller: bottomNaviBarController.pageController,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: List.generate(bottomNaviBarController.bottomBarPage.length,
             (index) => bottomNaviBarController.bottomBarPage[index]),
       ),
@@ -34,7 +34,7 @@ class BottomNaviBar extends StatelessWidget {
               showShadow: false,
               durationInMilliSeconds: 300,
               showBottomRadius: true,
-              itemLabelStyle: TextStyle(fontSize: 10, color: Colors.orange),
+              itemLabelStyle: const TextStyle(fontSize: 10, color: Colors.orange),
               elevation: 1,
 
         bottomBarItems: [

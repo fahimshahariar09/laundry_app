@@ -22,9 +22,9 @@ class BottomNaviBarController extends GetxController{
   }
 
   RxList<Widget> bottomBarPage = [
-    HomeScreen(),
-    CartScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const CartScreen(),
+    const ProfileScreen(),
   ].obs;
 
 }

@@ -25,17 +25,17 @@ class Verification extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Image.asset(AppImages.otp),
-                  SizedBox(height: 20),
-                  CommonText(titel: "OTP VERIFICATION "),
-                  SizedBox(height: 10),
-                  CommonText(
+                  const SizedBox(height: 20),
+                  const CommonText(titel: "OTP VERIFICATION "),
+                  const SizedBox(height: 10),
+                  const CommonText(
                     titel: "Please enter the verification code sent to :",
                     fColor: Colors.grey,
                   ),
-                  CommonText(titel: "fahim@gmail.com"),
-                  SizedBox(
+                  const CommonText(titel: "fahim@gmail.com"),
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
@@ -58,12 +58,12 @@ class Verification extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
-                  CustomTimer(),
-                  SizedBox(
+                  const SizedBox(height: 20),
+                  const CustomTimer(),
+                  const SizedBox(
                     height: 10,
                   ),
-                  Row(
+                  const Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -76,15 +76,15 @@ class Verification extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   Obx(() => verificationController.isLoading.value
                       ? CommonButton(
                           buttonName: "Verification",
                           onTap: () {
                             verificationController.verficationFun();
-                            Get.to(NewPassword());
+                            Get.to(const NewPassword());
                           })
-                      : CircularProgressIndicator()),
+                      : const CircularProgressIndicator()),
                 ],
               ),
             ),

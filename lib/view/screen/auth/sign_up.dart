@@ -62,6 +62,7 @@ class SignUp extends StatelessWidget {
                               return;
                             }
                             signUpController.signupFun();
+                            Get.to(const SignIn());
                           })
                       : const CommonLoadingButton()),
                   const SizedBox(height: 15),

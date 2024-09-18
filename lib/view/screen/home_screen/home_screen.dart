@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     HomeScreenController homeScreenController = Get.put(HomeScreenController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Screen"),
+        title: const Text("Home Screen"),
       ),
       body: Column(
         children: [
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                           height: 80,
                           width: 80,
                         ),
-                        Text("0"),
+                        const Text("0"),
                       ],
                     ),
                   );

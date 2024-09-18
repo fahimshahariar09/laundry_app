@@ -49,11 +49,11 @@ class SignIn extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      InkWell(
+                      GestureDetector(
                           onTap: (){
-                            Get.to(ForgetPassword());
+                            Get.to(const ForgetPassword());
                           },
-                          child: const Text("Forget Password?")),
+                          child: const Text("Forget Password?",style: TextStyle(color: Colors.red),)),
                     ],
                   ),
                   const SizedBox(height: 15),
@@ -66,7 +66,7 @@ class SignIn extends StatelessWidget {
                               return;
                             }
                             signInController.signinFun();
-                            Get.to(BottomNaviBar());
+                            Get.to(const BottomNaviBar());
                           })
                       : const CommonLoadingButton()),
                   const SizedBox(height: 20),
