@@ -18,7 +18,7 @@ class ForgetPasswordController extends GetxController{
   }
   @override
   void onInit() {
-    forgetpassFun();
+    emailController.text ="fahim@gmail.com";
     super.onInit();
   }
 

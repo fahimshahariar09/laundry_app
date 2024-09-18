@@ -9,6 +9,15 @@ class ForgetPassword extends StatelessWidget {
       appBar: AppBar(
         title: Text("forget password"),
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 40),
+            Image.asset("name"),
+          ],
+        ),
+      ),
     );
   }
 }
