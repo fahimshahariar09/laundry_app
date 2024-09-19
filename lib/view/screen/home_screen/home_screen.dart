@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Obx(() => SizedBox(
                   height: 165,
                   child: ListView.builder(
@@ -40,11 +40,11 @@ class HomeScreen extends StatelessWidget {
                         );
                       }),
                 )),
-            SizedBox(height: 25),
-            Row(
+            const SizedBox(height: 25),
+            const Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: EdgeInsets.only(left: 15),
                   child: CommonText(
                     titel: "Category",
                     fWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             // ListView.builder(
             //     itemCount: homeScreenController.homecategories.length,
             //     shrinkWrap: true,

@@ -38,7 +38,7 @@ class HomeCategoryCard extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 30),
+            const SizedBox(width: 30),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
