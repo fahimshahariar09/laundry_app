@@ -4,9 +4,9 @@ class HomeCategoryModel {
   HomeCategoryModel({this.homecategories});
 
   HomeCategoryModel.fromJson(Map<String, dynamic> json) {
-    if (json['categories'] != null) {
+    if (json['homecategories'] != null) {
       homecategories = <HomeCategories>[];
-      json['categories'].forEach((v) {
+      json['homecategories'].forEach((v) {
         homecategories!.add(HomeCategories.fromJson(v));
       });
     }
@@ -15,30 +15,30 @@ class HomeCategoryModel {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (homecategories != null) {
-      data['categories'] = homecategories!.map((v) => v.toJson()).toList();
+      data['homecategories'] = homecategories!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
 class HomeCategories {
-  String? image;
-  String? name;
-  String? tittle;
+  String? imageurl;
+  String? titel;
+  String? subtitel;
 
-  HomeCategories({this.image, this.name, this.tittle});
+  HomeCategories({this.imageurl, this.titel, this.subtitel});
 
   HomeCategories.fromJson(Map<String, dynamic> json) {
-    image = json['image'];
-    name = json['name'];
-    tittle = json['tittle'];
+    imageurl = json['imageurl'];
+    titel = json['titel'];
+    subtitel = json['subtitel'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['image'] = image;
-    data['name'] = name;
-    data['tittle'] = tittle;
+    data['imageurl'] = imageurl;
+    data['titel'] = titel;
+    data['subtitel'] = subtitel;
     return data;
   }
 }

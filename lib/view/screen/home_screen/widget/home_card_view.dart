@@ -4,11 +4,11 @@ import 'package:laundry/view/common_widget/common_text.dart';
 class HomeCardView extends StatelessWidget {
   const HomeCardView({
     super.key,
-    required this.image,
+    required this.imageurl,
     required this.titel,
   });
 
-  final String image;
+  final String imageurl;
   final String titel;
 
   @override
@@ -21,7 +21,7 @@ class HomeCardView extends StatelessWidget {
           child: SizedBox(
             height: 110,
             width: 120,
-            child: Image.asset(image),
+            child: Image.asset(imageurl),
           ),
         ),
         const SizedBox(height: 5),

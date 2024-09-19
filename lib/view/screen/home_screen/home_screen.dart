@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/home/home_screen.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/home_screen/widget/home_card_view.dart';
+import 'package:laundry/view/screen/home_screen/widget/home_category_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text("Home Screen"),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
             SizedBox(height: 15),
@@ -30,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                         return Padding(
                           padding: const EdgeInsets.all(5),
                           child: HomeCardView(
-                              image:
+                              imageurl:
                                   "${homeScreenController.homedemoData[index].image}",
                               titel:
                                   "${homeScreenController.homedemoData[index].name}"),
@@ -40,20 +43,55 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 25),
             Row(
               children: [
-                CommonText(titel: "Category",fWeight: FontWeight.w700,fSize: 18,fColor: Colors.white,)
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: CommonText(
+                    titel: "Category",
+                    fWeight: FontWeight.bold,
+                    fSize: 22,
+                    fColor: Colors.white,
+                  ),
+                )
               ],
             ),
             SizedBox(height: 15),
-            Expanded(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: [
-
-                  ],
+            // ListView.builder(
+            //     itemCount: homeScreenController.homecategories.length,
+            //     shrinkWrap: true,
+            //     physics: NeverScrollableScrollPhysics(),
+            //     itemBuilder: (context, index) {
+            //   return HomeCategoryCard(
+            //       onTap: () {},
+            //       image:
+            //           "${homeScreenController.homecategories[index].imageurl}",
+            //       titel: "",
+            //       subtitel: "");
+            // }),
+            Obx(
+              () => Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                     scrollDirection: Axis.vertical,
+                      itemCount: homeScreenController.homecategories.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: HomeCategoryCard(
+                            image:
+                                "${homeScreenController.homecategories[index].imageurl}",
+                            titel:
+                                "${homeScreenController.homecategories[index].titel}",
+                            subtitel:
+                                "${homeScreenController.homecategories[index].subtitel}",
+                            onTap: () {},
+                          ),
+                        );
+                      }),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
