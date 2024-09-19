@@ -1,16 +1,17 @@
 
 
 import 'package:get/get.dart';
-import 'package:laundry/controller/api_controller/home/home_screen.dart';
-import 'package:laundry/model/home/home_list_model.dart';
+import 'package:laundry/controller/api_controller/home/home_demo.dart';
+import 'package:laundry/model/home/home_demo_model.dart';
 
 class HomeScreenController extends GetxController{
-  List<HomeListModel> homeList =[];
+  RxList<HomeDemoData> homedemoData = <HomeDemoData>[].obs;
   RxBool isLoading = true.obs;
 
   homedemoFun()async{
     isLoading.value =true;
-    homeList = await HomeScreenService.homescreenService();
+    var homedemo = await HomeDemoService.homedemoService();
+    homedemoData.value = homedemo?.homedemoData ?? [];
     isLoading.value =false;
   }
 
