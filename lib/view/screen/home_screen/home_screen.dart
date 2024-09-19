@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/home/home_screen.dart';
+import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/home_screen/widget/home_card_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -37,6 +38,22 @@ class HomeScreen extends StatelessWidget {
                       }),
                 )),
             SizedBox(height: 25),
+            Row(
+              children: [
+                CommonText(titel: "Category",fWeight: FontWeight.w700,fSize: 18,fColor: Colors.white,)
+              ],
+            ),
+            SizedBox(height: 15),
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),

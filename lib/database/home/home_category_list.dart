@@ -1,6 +1,6 @@
 class HomeCategoryList {
   static Map<String, dynamic> homecategoryList = {
-    "categories": [
+    "homecategories": [
       {
         "image":
             "https://github.com/user-attachments/assets/cf3adc18-9c8a-4d84-b7a4-12fea35b897f",
