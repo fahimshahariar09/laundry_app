@@ -26,15 +26,23 @@ class CategoryDetails {
   String? image;
   String? name;
   String? price;
+  String? description;
   int? rating;
 
-  CategoryDetails({this.image, this.name, this.price, this.rating});
+  CategoryDetails({
+    this.image,
+    this.name,
+    this.price,
+    this.rating,
+    this.description,
+  });
 
   CategoryDetails.fromJson(Map<String, dynamic> json) {
     image = json['image'];
     name = json['name'];
     price = json['price'];
     rating = json['rating'];
+    description = json['description'];
   }
 
   Map<String, dynamic> toJson() {
@@ -43,6 +51,7 @@ class CategoryDetails {
     data['name'] = name;
     data['price'] = price;
     data['rating'] = rating;
+    data['description'] = description;
     return data;
   }
 }
