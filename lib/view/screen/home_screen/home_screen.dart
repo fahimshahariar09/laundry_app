@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/home/home_screen.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
+import 'package:laundry/view/screen/category/category_detalis.dart';
 import 'package:laundry/view/screen/home_screen/widget/home_card_view.dart';
 import 'package:laundry/view/screen/home_screen/widget/home_category_card.dart';
 
@@ -65,20 +66,18 @@ class HomeScreen extends StatelessWidget {
                       itemCount: homeScreenController.homecategories.length,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            onTap: (){
-
+                          padding:  EdgeInsets.all(8.0),
+                          child: HomeCategoryCard(
+                            image:
+                                "${homeScreenController.homecategories[index].imageurl}",
+                            titel:
+                                "${homeScreenController.homecategories[index].titel}",
+                            subtitel:
+                                "${homeScreenController.homecategories[index].subtitel}",
+                            onTap: () {
+                              Get.to(CategoryDetalis());
+                              log("message");
                             },
-                            child: HomeCategoryCard(
-                              image:
-                                  "${homeScreenController.homecategories[index].imageurl}",
-                              titel:
-                                  "${homeScreenController.homecategories[index].titel}",
-                              subtitel:
-                                  "${homeScreenController.homecategories[index].subtitel}",
-                              onTap: () {},
-                            ),
                           ),
                         );
                       }),
