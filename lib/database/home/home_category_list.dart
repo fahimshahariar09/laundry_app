@@ -3,63 +3,39 @@ class HomeCategoryList {
     "homecategories": [
       {
         "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Daily use clothes",
-        "subtitel": "T-shirts,Shirts,Pants"
+            "assets/category/t-shirt.png",
+        "titel": "T-Shirts clothes",
+        "subtitel": "T-shirts,Polo-Shirts"
       },
       {
         "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Household Textiles",
-        "subtitel": "Curtains,Bedsheets,more"
+            "assets/category/shirts.png.png",
+        "titel": "Shirts",
+        "subtitel": "Shirts,more"
       },
       {
         "imageurl":
-            "assets/icon/dry.png",
+            "assets/category/jeans.png.png",
         "titel": "Suits",
-        "subtitel": "Blazer,Pants,Shirt"
+        "subtitel": "Jeans Pants,Jersy"
       },
       {
         "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Dry Cleaning",
-        "subtitel": "T-shirts,Shirts,Pants"
+            "assets/category/blazer.png",
+        "titel": "Blazer",
+        "subtitel": "Jacket Blazer,Shirts"
       },
       {
         "imageurl":
-            "assets/icon/dry.png",
+            "assets/category/blankets.png",
+        "titel": "Blankets Textiles",
+        "subtitel": "Blankets,Bedsheets,more"
+      },
+      {
+        "imageurl":
+            "assets/category/silk saree.png.png",
         "titel": "Household Textiles",
-        "subtitel": "Curtains,Bedsheets,more"
-      },
-      {
-        "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Daily use clothes",
-        "subtitel": "T-shirts,Shirts,Pants"
-      },
-      {
-        "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Household Textiles",
-        "subtitel": "Curtains,Bedsheets,more"
-      },
-      {
-        "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Suits",
-        "subtitel": "Blazer,Pants,Shirt"
-      },
-      {
-        "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Dry Cleaning",
-        "subtitel": "T-shirts,Shirts,Pants"
-      },
-      {
-        "imageurl":
-            "assets/icon/dry.png",
-        "titel": "Household Textiles",
-        "subtitel": "Curtains,Bedsheets,more"
+        "subtitel": "Silk Saree,Bedsheets,"
       }
     ]
   };

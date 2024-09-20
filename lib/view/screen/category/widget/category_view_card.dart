@@ -20,31 +20,35 @@ class CategoryViewCard extends StatelessWidget {
     return Container(
       height: 120,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Colors.white),
-      child: Column(
+          borderRadius: BorderRadius.circular(10), color: Colors.grey.shade300,),
+      child: Row(
         children: [
-          Card(
-            elevation: 1,
-            child: SizedBox(
-              height: 80,
-              width: 80,
-              child: Image.asset(imagesurl),
-            ),
+          SizedBox(
+            height: 80,
+            width: 80,
+            child: Image.asset(imagesurl),
           ),
-          const SizedBox(width: 30),
+          const SizedBox(width: 15),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CommonText(
                 titel: name,
-                fSize: 20,
+                fColor: Colors.black,
+                fSize: 18,
               ),
+              SizedBox(height: 3),
               CommonText(
                 titel: titel,
+                fColor: Colors.blue,
                 fSize: 15,
               ),
-              CommonText(titel: rating),
+              SizedBox(height: 3),
+              CommonText(
+                titel: rating,
+                fColor: Colors.amber,
+              ),
             ],
           )
         ],

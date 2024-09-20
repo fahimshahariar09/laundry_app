@@ -55,18 +55,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 15),
-            // ListView.builder(
-            //     itemCount: homeScreenController.homecategories.length,
-            //     shrinkWrap: true,
-            //     physics: NeverScrollableScrollPhysics(),
-            //     itemBuilder: (context, index) {
-            //   return HomeCategoryCard(
-            //       onTap: () {},
-            //       image:
-            //           "${homeScreenController.homecategories[index].imageurl}",
-            //       titel: "",
-            //       subtitel: "");
-            // }),
             Obx(
               () => Expanded(
                 child: Padding(
@@ -78,14 +66,19 @@ class HomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: HomeCategoryCard(
-                            image:
-                                "${homeScreenController.homecategories[index].imageurl}",
-                            titel:
-                                "${homeScreenController.homecategories[index].titel}",
-                            subtitel:
-                                "${homeScreenController.homecategories[index].subtitel}",
-                            onTap: () {},
+                          child: InkWell(
+                            onTap: (){
+
+                            },
+                            child: HomeCategoryCard(
+                              image:
+                                  "${homeScreenController.homecategories[index].imageurl}",
+                              titel:
+                                  "${homeScreenController.homecategories[index].titel}",
+                              subtitel:
+                                  "${homeScreenController.homecategories[index].subtitel}",
+                              onTap: () {},
+                            ),
                           ),
                         );
                       }),

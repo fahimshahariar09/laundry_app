@@ -29,13 +29,10 @@ class HomeCategoryCard extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(5),
-              child: Card(
-                elevation: 1,
-                child: SizedBox(
-                  height: 80,
-                  width: 80,
-                  child: Image.asset(image),
-                ),
+              child: SizedBox(
+                height: 80,
+                width: 80,
+                child: Image.asset(image,fit: BoxFit.cover,),
               ),
             ),
             const SizedBox(width: 30),
