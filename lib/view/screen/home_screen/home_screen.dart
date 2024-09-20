@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                       itemCount: homeScreenController.homecategories.length,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding:  EdgeInsets.all(8.0),
+                          padding:  const EdgeInsets.all(8.0),
                           child: HomeCategoryCard(
                             image:
                                 "${homeScreenController.homecategories[index].imageurl}",
@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                             subtitel:
                                 "${homeScreenController.homecategories[index].subtitel}",
                             onTap: () {
-                              Get.to(CategoryDetalis());
+                              Get.to(const CategoryDetalis());
                               log("message");
                             },
                           ),

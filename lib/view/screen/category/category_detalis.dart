@@ -14,35 +14,40 @@ class CategoryDetalis extends StatelessWidget {
         Get.put(CategoryDetalisController());
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(height: 20),
-            CommonTextField(
-                searchController: categoryDetalisController.searchController),
-            SizedBox(height: 20),
-            Obx(() => categoryDetalisController.isLoading.isFalse
-                ? Expanded(
-                    child: ListView.builder(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              CommonTextField(
+                  searchController: categoryDetalisController.searchController),
+              SizedBox(height: 20),
+              Obx(() => categoryDetalisController.isLoading.isFalse
+                  ? Expanded(
+                      child: ListView.builder(
                         shrinkWrap: true,
                         itemCount: categoryDetalisController.category.length,
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: CategoryViewCard(
-                                imagesurl:
-                                    "${categoryDetalisController.category[index].image}",
-                                name:
-                                    "Name: ${categoryDetalisController.category[index].name}",
-                                titel:
-                                    "Price: ${categoryDetalisController.category[index].price}",
-                                rating:
-                                    "Rating: ${categoryDetalisController.category[index].rating}"),
+                              imagesurl:
+                                  "${categoryDetalisController.category[index].image}",
+                              name:
+                                  "Name: ${categoryDetalisController.category[index].name}",
+                              titel:
+                                  "Price: ${categoryDetalisController.category[index].price}",
+                              rating:
+                                  "Rating: ${categoryDetalisController.category[index].rating}",
+                            ),
                           );
-                        }),
-                  )
-                : CircularProgressIndicator()),
-            CommonButton(buttonName: "Add To Cart", onTap: () {})
-          ],
+                        },
+                      ),
+                    )
+                  : CircularProgressIndicator()),
+              CommonButton(buttonName: "Add To Cart",buttonColor: Colors.grey,textColor: Colors.black, onTap: () {})
+            ],
+          ),
         ),
       ),
     );

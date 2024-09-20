@@ -25,7 +25,7 @@ class CommonTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           labelText: lText,
-          suffixIcon: Icon(Icons.search)),
+          suffixIcon: icon ?? const Icon(Icons.search)),
     );
   }
 }

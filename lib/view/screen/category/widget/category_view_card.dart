@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:laundry/view/common_widget/common_rich_text.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 
 class CategoryViewCard extends StatelessWidget {
-  const CategoryViewCard(
-      {super.key,
-      required this.imagesurl,
-      required this.name,
-      required this.titel,
-      required this.rating});
+  const CategoryViewCard({
+    super.key,
+    required this.imagesurl,
+    required this.name,
+    required this.titel,
+    required this.rating,
+  });
 
   final String imagesurl;
   final String name;

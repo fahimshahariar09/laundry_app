@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/api_controller/category/category_detalis.dart';
-import 'package:laundry/model/category_details.dart';
+import 'package:laundry/model/category_detalis/category_details.dart';
 
 class CategoryDetalisController extends GetxController{
   TextEditingController searchController =TextEditingController();

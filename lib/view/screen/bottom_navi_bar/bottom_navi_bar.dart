@@ -22,44 +22,47 @@ class BottomNaviBar extends StatelessWidget {
               bottomNaviBarController.maxCount.value)
           ? AnimatedNotchBottomBar(
               notchBottomBarController: bottomNaviBarController.nController,
-              color: Colors.white,
+              color: Colors.blue,
               showLabel: true,
               textOverflow: TextOverflow.ellipsis,
               maxLine: 1,
               shadowElevation: 10,
               kBottomRadius: 25,
-              notchColor: Colors.red,
+              notchColor: Colors.orange,
               removeMargins: false,
               bottomBarWidth: MediaQuery.sizeOf(context).width,
               showShadow: false,
               durationInMilliSeconds: 300,
               showBottomRadius: true,
-              itemLabelStyle: const TextStyle(fontSize: 10, color: Colors.orange),
+              itemLabelStyle:
+                  const TextStyle(fontSize: 15, color: Colors.black),
               elevation: 1,
-
-        bottomBarItems: [
-          buildBottomBarItem(icon: Icons.category, label: "Category"),
-          buildBottomBarItem(icon: Icons.home, label: "Home"),
-          buildBottomBarItem(icon: Icons.person, label: "profile"),
-        ], onTap: (index) {
+              bottomBarItems: [
+                buildBottomBarItem(icon: Icons.category, label: "Category"),
+                buildBottomBarItem(icon: Icons.home, label: "Home"),
+                buildBottomBarItem(icon: Icons.person, label: "profile"),
+              ],
+              onTap: (index) {
                 bottomNaviBarController.pageController.jumpToPage(index);
-      },
-        kIconSize: 20,
+              },
+              kIconSize: 20,
             )
           : null,
     );
   }
 
-  BottomBarItem buildBottomBarItem(
-      {required IconData icon, required String label}) {
+  BottomBarItem buildBottomBarItem({
+    required IconData icon,
+    required String label,
+  }) {
     return BottomBarItem(
       inActiveItem: Icon(
         icon,
-        color: Colors.black,
+        color: Colors.white,
       ),
       activeItem: Icon(
         icon,
-        color: Colors.white,
+        color: Colors.black,
       ),
       itemLabel: label,
     );
