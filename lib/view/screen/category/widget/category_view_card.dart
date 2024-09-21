@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:laundry/view/common_widget/common_rich_text.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 
 class CategoryViewCard extends StatelessWidget {
