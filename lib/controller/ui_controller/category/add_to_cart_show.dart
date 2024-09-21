@@ -16,4 +16,10 @@ class AddToCartShowController extends GetxController{
    isLoading.value =false;
   }
 
+  @override
+  void onInit() {
+    addtocartshowFun();
+    super.onInit();
+  }
+
 }

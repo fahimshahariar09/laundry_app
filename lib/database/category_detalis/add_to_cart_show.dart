@@ -5,7 +5,7 @@ class AddToCartShowList {
         "image":
             "assets/category/t-shirt.png",
         "name": "T-shirts",
-        "price": "Rs.30"
+        "price": "Price-5\$"
       },
       // {
       //   "image":
