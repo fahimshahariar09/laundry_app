@@ -8,6 +8,7 @@ class AddToCartShowController extends GetxController{
 
   RxBool isLoading =false.obs;
   RxList<AddToCartShow> addtocart = <AddToCartShow>[].obs;
+  RxInt value =1.obs;
 
   addtocartshowFun()async{
     isLoading.value = true;
