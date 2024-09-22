@@ -19,7 +19,14 @@ class SettingScreen extends StatelessWidget {
             color: Colors.grey,
             child: Row(
               children: [
-                Text("Night Ligth",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 16),)
+                Text(
+                  "Night Ligth",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16),
+                ),
+                
               ],
             ),
           )
