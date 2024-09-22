@@ -8,13 +8,21 @@ class AddToCartShowController extends GetxController{
 
   RxBool isLoading =false.obs;
   RxList<AddToCartShow> addtocart = <AddToCartShow>[].obs;
-  RxInt value =1.obs;
+  var  count =0.obs;
 
   addtocartshowFun()async{
     isLoading.value = true;
    var add = await AddToCartShowService.addtocartService();
    addtocart.value = add?.addtocartShow ?? [];
    isLoading.value =false;
+  }
+
+  void increment(){
+    count++;
+  }
+
+  void decrement(){
+    count--;
   }
 
   @override

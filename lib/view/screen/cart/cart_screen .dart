@@ -1,3 +1,4 @@
+import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/category/add_to_cart_show.dart';
@@ -42,11 +43,12 @@ class CartScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                               // SizedBox(width: 30),
+                                // SizedBox(width: 30),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 20),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       CommonText(
@@ -71,26 +73,31 @@ class CartScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: Colors.cyan),
-                                  child: Row(
+                                  child: Obx(()=>Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.center,
                                     children: [
                                       IconButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          addToCartShowController.decrement();
+                                        },
                                         icon: Icon(Icons.remove),
                                       ),
                                       SizedBox(width: 3),
                                       SizedBox(
                                           height: 20,
                                           width: 20,
-                                          child: Center(child: Text("15"))),
+                                          child: Center(child: Text("${addToCartShowController.count}"))),
                                       SizedBox(width: 3),
                                       IconButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          addToCartShowController.increment();
+                                        },
                                         icon: Icon(Icons.add),
                                       ),
                                     ],
-                                  ),
+                                  )),
                                 )
                               ],
                             ),
