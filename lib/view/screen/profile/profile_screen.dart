@@ -12,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
         title: const Text("Profile"),
         centerTitle: true,
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: Column(
           children: [
             SizedBox(height: 20),

@@ -20,10 +20,10 @@ class CategoryDetalis extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CommonTextField(
                   searchController: categoryDetalisController.searchController),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Obx(() => categoryDetalisController.isLoading.isFalse
                   ? Expanded(
                       child: ListView.builder(
@@ -34,7 +34,7 @@ class CategoryDetalis extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: InkWell(
                               onTap: (){
-                                Get.to(CartScreen());
+                                Get.to(const CartScreen());
                               },
                               child: CategoryViewCard(
                                 imagesurl:
@@ -51,13 +51,13 @@ class CategoryDetalis extends StatelessWidget {
                         },
                       ),
                     )
-                  : CircularProgressIndicator()),
+                  : const CircularProgressIndicator()),
               CommonButton(
                   buttonName: "Add To Cart",
                   buttonColor: Colors.grey,
                   textColor: Colors.black,
                   onTap: () {
-                    Get.to(CartScreen());
+                    Get.to(const CartScreen());
                   })
             ],
           ),

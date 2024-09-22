@@ -42,13 +42,13 @@ class CategoryViewCard extends StatelessWidget {
                   fColor: Colors.black,
                   fSize: 18,
                 ),
-                SizedBox(height: 3),
+                const SizedBox(height: 3),
                 CommonText(
                   titel: titel,
                   fColor: Colors.blue,
                   fSize: 15,
                 ),
-                SizedBox(height: 3),
+                const SizedBox(height: 3),
                 CommonText(
                   titel: rating,
                   fColor: Colors.amber,

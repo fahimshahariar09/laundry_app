@@ -17,6 +17,7 @@ class CategoryDetalisController extends GetxController{
     isLoading.value =false;
   }
 
+
   @override
   void onInit() {
     categorydetailsFun();

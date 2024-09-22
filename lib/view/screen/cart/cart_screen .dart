@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/category/add_to_cart_show.dart';
@@ -118,8 +117,9 @@ class CartScreen extends StatelessWidget {
                   )
                 : const CircularProgressIndicator()),
             CommonButton(buttonName: "Confram Order", onTap: () {
+             // Get.snackbar("message", "order success");
             }),
-            SizedBox(height: 100,)
+            const SizedBox(height: 100,)
           ],
         ),
       ),
