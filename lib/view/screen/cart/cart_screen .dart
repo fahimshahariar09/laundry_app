@@ -16,7 +16,7 @@ class CartScreen extends StatelessWidget {
       backgroundColor: const Color(0xff6DA0C2),
       appBar: AppBar(
         backgroundColor: const Color(0xff6DA0C2),
-        title: const Text("Add To Cart"),
+        title: const Text("Order"),
         centerTitle: true,
       ),
       body: Padding(
@@ -68,7 +68,7 @@ class CartScreen extends StatelessWidget {
                                               "${addToCartShowController.addtocart[index].price}",
                                           fWeight: FontWeight.w500,
                                           fSize: 16,
-                                          fColor: Colors.blue,
+                                          fColor: Colors.black,
                                         )
                                       ],
                                     ),
@@ -117,7 +117,7 @@ class CartScreen extends StatelessWidget {
                         }),
                   )
                 : const CircularProgressIndicator()),
-            CommonButton(buttonName: "Order", onTap: () {
+            CommonButton(buttonName: "Confram Order", onTap: () {
             }),
             SizedBox(height: 100,)
           ],
