@@ -2,6 +2,7 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/category/add_to_cart_show.dart';
+import 'package:laundry/view/common_widget/common_button.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 
 class CartScreen extends StatelessWidget {
@@ -12,7 +13,9 @@ class CartScreen extends StatelessWidget {
     AddToCartShowController addToCartShowController =
         Get.put(AddToCartShowController());
     return Scaffold(
+      backgroundColor: const Color(0xff6DA0C2),
       appBar: AppBar(
+        backgroundColor: const Color(0xff6DA0C2),
         title: const Text("Add To Cart"),
         centerTitle: true,
       ),
@@ -20,6 +23,7 @@ class CartScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           children: [
+            SizedBox(height: 15),
             Obx(() => addToCartShowController.isLoading.isFalse
                 ? Expanded(
                     child: ListView.builder(
@@ -73,31 +77,36 @@ class CartScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: Colors.cyan),
-                                  child: Obx(()=>Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                    CrossAxisAlignment.center,
-                                    children: [
-                                      IconButton(
-                                        onPressed: () {
-                                          addToCartShowController.decrement();
-                                        },
-                                        icon: Icon(Icons.remove),
-                                      ),
-                                      SizedBox(width: 3),
-                                      SizedBox(
-                                          height: 20,
-                                          width: 20,
-                                          child: Center(child: Text("${addToCartShowController.count}"))),
-                                      SizedBox(width: 3),
-                                      IconButton(
-                                        onPressed: () {
-                                          addToCartShowController.increment();
-                                        },
-                                        icon: Icon(Icons.add),
-                                      ),
-                                    ],
-                                  )),
+                                  child: Obx(() => Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          IconButton(
+                                            onPressed: () {
+                                              addToCartShowController
+                                                  .decrement();
+                                            },
+                                            icon: Icon(Icons.remove),
+                                          ),
+                                          SizedBox(width: 3),
+                                          SizedBox(
+                                              height: 20,
+                                              width: 20,
+                                              child: Center(
+                                                  child: Text(
+                                                      "${addToCartShowController.count}"))),
+                                          SizedBox(width: 3),
+                                          IconButton(
+                                            onPressed: () {
+                                              addToCartShowController
+                                                  .increment();
+                                            },
+                                            icon: Icon(Icons.add),
+                                          ),
+                                        ],
+                                      )),
                                 )
                               ],
                             ),
@@ -105,6 +114,9 @@ class CartScreen extends StatelessWidget {
                         }),
                   )
                 : CircularProgressIndicator()),
+            CommonButton(buttonName: "Order", onTap: () {
+
+            }),
           ],
         ),
       ),

@@ -38,8 +38,8 @@ class BottomNaviBar extends StatelessWidget {
                   const TextStyle(fontSize: 15, color: Colors.black),
               elevation: 1,
               bottomBarItems: [
-                buildBottomBarItem(icon: Icons.category, label: "Category"),
                 buildBottomBarItem(icon: Icons.home, label: "Home"),
+                buildBottomBarItem(icon: Icons.shopping_cart_outlined, label: "Cart"),
                 buildBottomBarItem(icon: Icons.person, label: "profile"),
               ],
               onTap: (index) {

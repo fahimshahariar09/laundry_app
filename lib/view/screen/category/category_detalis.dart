@@ -14,6 +14,7 @@ class CategoryDetalis extends StatelessWidget {
     CategoryDetalisController categoryDetalisController =
         Get.put(CategoryDetalisController());
     return Scaffold(
+      backgroundColor: const Color(0xff6DA0C2),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -31,15 +32,20 @@ class CategoryDetalis extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: CategoryViewCard(
-                              imagesurl:
-                                  "${categoryDetalisController.category[index].image}",
-                              name:
-                                  "Name: ${categoryDetalisController.category[index].name}",
-                              titel:
-                                  "Price: ${categoryDetalisController.category[index].price}",
-                              rating:
-                                  "Rating: ${categoryDetalisController.category[index].rating}",
+                            child: InkWell(
+                              onTap: (){
+                                Get.to(CartScreen());
+                              },
+                              child: CategoryViewCard(
+                                imagesurl:
+                                    "${categoryDetalisController.category[index].image}",
+                                name:
+                                    "Name: ${categoryDetalisController.category[index].name}",
+                                titel:
+                                    "Price: ${categoryDetalisController.category[index].price}",
+                                rating:
+                                    "Rating: ${categoryDetalisController.category[index].rating}",
+                              ),
                             ),
                           );
                         },
