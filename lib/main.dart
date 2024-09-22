@@ -1,9 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:laundry/model/category_detalis/add_to_cart_show_model.dart';
-import 'package:laundry/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
-import 'package:laundry/view/screen/cart/cart_screen%20.dart';
+import 'package:laundry/view/screen/profile/profile_screen.dart';
 import 'package:laundry/view/screen/splash/splash_screen.dart';
 
 void main(){
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNaviBar(),
+      home: SplashScreen(),
     );
   }
 }

@@ -6,7 +6,20 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Profile"),),
+      backgroundColor: const Color(0xff6DA0C2),
+      appBar: AppBar(
+        backgroundColor: const Color(0xff6DA0C2),
+        title: const Text("Profile"),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Text("data")
+          ],
+        ),
+      ),
     );
   }
 }
