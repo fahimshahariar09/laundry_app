@@ -16,7 +16,9 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 20),
-            Text("data")
+            CircleAvatar(
+              radius: 70,
+            )
           ],
         ),
       ),

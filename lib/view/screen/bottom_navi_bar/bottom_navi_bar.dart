@@ -26,8 +26,8 @@ class BottomNaviBar extends StatelessWidget {
               showLabel: true,
               textOverflow: TextOverflow.ellipsis,
               maxLine: 1,
-              shadowElevation: 10,
-              kBottomRadius: 25,
+              shadowElevation: 8,
+              kBottomRadius: 20,
               notchColor: Colors.orange,
               removeMargins: false,
               bottomBarWidth: MediaQuery.sizeOf(context).width,
@@ -41,11 +41,12 @@ class BottomNaviBar extends StatelessWidget {
                 buildBottomBarItem(icon: Icons.home, label: "Home"),
                 buildBottomBarItem(icon: Icons.shopping_cart_outlined, label: "Cart"),
                 buildBottomBarItem(icon: Icons.person, label: "profile"),
+                buildBottomBarItem(icon: Icons.settings, label: "Setting"),
               ],
               onTap: (index) {
                 bottomNaviBarController.pageController.jumpToPage(index);
               },
-              kIconSize: 20,
+              kIconSize: 15,
             )
           : null,
     );

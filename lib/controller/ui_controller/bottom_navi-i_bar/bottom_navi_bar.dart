@@ -1,18 +1,17 @@
-
-
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:laundry/view/screen/cart/cart_screen%20.dart';
 import 'package:laundry/view/screen/home_screen/home_screen.dart';
 import 'package:laundry/view/screen/profile/profile_screen.dart';
+import 'package:laundry/view/screen/setting/setting_screen.dart';
 
-class BottomNaviBarController extends GetxController{
-
+class BottomNaviBarController extends GetxController {
   final pageController = PageController(initialPage: 0);
-  final NotchBottomBarController nController = NotchBottomBarController(index: 0);
+  final NotchBottomBarController nController =
+      NotchBottomBarController(index: 0);
   RxInt index = 0.obs;
-  RxInt maxCount = 3.obs;
+  RxInt maxCount = 4.obs;
   RxInt page = 0.obs;
 
   @override
@@ -25,6 +24,6 @@ class BottomNaviBarController extends GetxController{
     const HomeScreen(),
     const CartScreen(),
     const ProfileScreen(),
+    const SettingScreen(),
   ].obs;
-
 }

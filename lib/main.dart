@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:laundry/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
+import 'package:laundry/view/screen/profile/profile_screen.dart';
+import 'package:laundry/view/screen/setting/setting_screen.dart';
 import 'package:laundry/view/screen/splash/splash_screen.dart';
 
 void main(){
@@ -11,9 +14,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: SettingScreen(),
     );
   }
 }
