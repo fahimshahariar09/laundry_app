@@ -10,18 +10,19 @@ class SettingScreen extends StatelessWidget {
     SettingController settingController = Get.put(SettingController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("Setting"),
+        title: const Text("Setting"),
       ),
       body: Column(
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
+          //dark and light mode
           Container(
             height: 50,
             width: MediaQuery.sizeOf(context).width,
             color: Colors.grey,
             child: Row(
               children: [
-                Text(
+                const Text(
                   "Night Ligth",
                   style: TextStyle(
                       color: Colors.white,
@@ -35,7 +36,9 @@ class SettingScreen extends StatelessWidget {
                     })
               ],
             ),
-          )
+          ),
+          //language change
+
         ],
       ),
     );
