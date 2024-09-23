@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme().ligthTheme,
-      home: SplashScreen(),
+      home: ProfileScreen(),
     );
   }
 }
