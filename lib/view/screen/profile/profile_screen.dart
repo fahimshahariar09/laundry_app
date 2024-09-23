@@ -15,51 +15,123 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: 20),
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                      AppIcon.profile,
-                    ),
-                    radius: 70,
-                  ),
-                  Positioned(
-                      right: 10,
-                      bottom: 4,
-                      child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 15,
-                        child: Icon(
-                          Icons.edit,
-                          size: 10,
-                          color: Colors.black,
-                        ),
-                      ))
-                ],
-              ),
-              SizedBox(height: 20),
-              CommonButton(
-                buttonName: "Change Profile",
-                buttonWidth: 250,
-                onTap: () {},
-              ),
-              SizedBox(height: 15),
-              Container(
-                height: 50,
-                width: MediaQuery.sizeOf(context).width,
-                color: Colors.grey,
-                child: Row(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: 20),
+                Stack(
+                  clipBehavior: Clip.none,
                   children: [
-                    Text("Name"),
+                    CircleAvatar(
+                      backgroundImage: AssetImage(
+                        AppIcon.profile,
+                      ),
+                      radius: 70,
+                    ),
+                    const Positioned(
+                        right: 10,
+                        bottom: 4,
+                        child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                          radius: 15,
+                          child: Icon(
+                            Icons.edit,
+                            size: 10,
+                            color: Colors.black,
+                          ),
+                        ))
                   ],
                 ),
-              )
-            ],
+                const SizedBox(height: 20),
+                CommonButton(
+                  buttonName: "Change Profile",
+                  buttonWidth: 250,
+                  onTap: () {},
+                ),
+                const SizedBox(height: 15),
+                Container(
+                  height: 50,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.white,
+                  child: const Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: Text(
+                          "First Name",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  height: 50,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.white,
+                  child: const Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: Text(
+                          "Last Name",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  height: 50,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.white,
+                  child: const Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: Text(
+                          "Phone or Email",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  height: 50,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.white,
+                  child: const Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: Text(
+                          "Password",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
