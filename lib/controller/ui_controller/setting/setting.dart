@@ -27,6 +27,7 @@ class SettingController extends GetxController{
       default:
         local ="en";
     }
+    Get.updateLocale(Locale(local));
   }
 
   //dark and light
