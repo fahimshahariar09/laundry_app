@@ -11,7 +11,6 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Setting"),
-        centerTitle: true,
       ),
       body: Column(
         children: [
@@ -31,7 +30,6 @@ class SettingScreen extends StatelessWidget {
                 ),
                 Switch(
                     value: settingController.isLigthTheme.value,
-                    autofocus: false,
                     onChanged: (value) {
                       settingController.changeThemeFun();
                     })

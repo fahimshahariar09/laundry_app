@@ -8,4 +8,8 @@ class AppIcon{
   static String twitter = "assets/icon/twitte.png";
 
 
+  //profile image
+  static String profile = "assets/icon/profile.png";
+
+
 }
