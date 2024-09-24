@@ -5,6 +5,20 @@ class ProfileEdit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Profile edit"),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          SizedBox(height: 20,),
+          TextField(),
+          TextField(),
+          TextField(),
+          TextField(),
+        ],
+      ),
+    );
   }
 }

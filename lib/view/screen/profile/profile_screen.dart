@@ -14,9 +14,13 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xff6DA0C2),
         title: const Text("Profile"),
-        actions: [IconButton(onPressed: () {
-          Get.to(ProfileEdit());
-        }, icon: Icon(Icons.edit))],
+        actions: [
+          IconButton(
+              onPressed: () {
+                Get.to(ProfileEdit());
+              },
+              icon: Icon(Icons.edit))
+        ],
       ),
       body: SafeArea(
         child: Center(
@@ -134,7 +138,11 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CommonButton(buttonName: "Save", buttonWidth: 200, onTap: () {})
               ],
             ),
           ),
