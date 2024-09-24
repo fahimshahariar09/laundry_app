@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:laundry/constants/icon.dart';
 import 'package:laundry/view/common_widget/common_button.dart';
+import 'package:laundry/view/screen/profile/profile_edit.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -12,6 +14,9 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xff6DA0C2),
         title: const Text("Profile"),
+        actions: [IconButton(onPressed: () {
+          Get.to(ProfileEdit());
+        }, icon: Icon(Icons.edit))],
       ),
       body: SafeArea(
         child: Center(
