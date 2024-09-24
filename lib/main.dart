@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/utils/theme.dart';
-import 'package:laundry/view/screen/profile/profile_screen.dart';
+import 'package:laundry/view/screen/splash/splash_screen.dart';
 
 void main(){
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme().ligthTheme,
-      home: const ProfileScreen(),
+      home:  SplashScreen(),
     );
   }
 }

@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:laundry/view/screen/cart/cart_screen%20.dart';
 import 'package:laundry/view/screen/home_screen/home_screen.dart';
 import 'package:laundry/view/screen/profile/profile_screen.dart';
-import 'package:laundry/view/screen/setting/setting_screen.dart';
 
 class BottomNaviBarController extends GetxController {
   final pageController = PageController(initialPage: 0);
@@ -24,6 +23,5 @@ class BottomNaviBarController extends GetxController {
     const HomeScreen(),
     const CartScreen(),
     const ProfileScreen(),
-    const SettingScreen(),
   ].obs;
 }
