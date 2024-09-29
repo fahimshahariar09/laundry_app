@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/view/screen/order/confram_order.dart';
-import 'package:laundry/view/screen/splash/splash_screen.dart';
 
 void main(){
   runApp(const MyApp());
