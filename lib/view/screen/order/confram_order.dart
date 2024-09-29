@@ -10,21 +10,23 @@ class ConframOrder extends StatelessWidget {
     return const Scaffold(
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ConfirmationSuccess(
                 reactColor: Colors.green,
                 child: Text("Order Success!",
                     style: TextStyle(
                         fontSize: 25,
-                        color: Colors.red,
-                        fontWeight: FontWeight.bold))),
-            SizedBox(height: 20),
-            CommonText(
-              titel: "We've successfully accepted \n your order!",
-              fSize: 18,
-            ),
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),)),
+            SizedBox(height: 30),
+            Text("#2415867 Order No."),
+            SizedBox(height: 15),
+            Text(
+              "We've successfully accepted\nyour order!",
+              style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),textAlign: TextAlign.center,
+            )
           ],
         ),
       ),
