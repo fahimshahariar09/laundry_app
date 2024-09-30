@@ -7,10 +7,10 @@ class ProfileEdit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profile edit"),
+        title: const Text("Profile edit"),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         children: [
           SizedBox(height: 20,),
           TextField(),

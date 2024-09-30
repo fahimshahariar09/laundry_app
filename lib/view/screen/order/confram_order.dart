@@ -2,7 +2,6 @@ import 'package:confirmation_success/confirmation_success.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
-import 'package:laundry/view/screen/home_screen/home_screen.dart';
 
 class ConframOrder extends StatelessWidget {
   const ConframOrder({super.key});
@@ -17,9 +16,9 @@ class ConframOrder extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: (){
-                Get.off(BottomNaviBar());
+                Get.off(const BottomNaviBar());
               },
-              child: ConfirmationSuccess(
+              child: const ConfirmationSuccess(
                   reactColor: Colors.green,
                   child: Text(
                     "Order Success!",
@@ -29,10 +28,10 @@ class ConframOrder extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   )),
             ),
-            SizedBox(height: 30),
-            Text("#2415867 Order No."),
-            SizedBox(height: 15),
-            Text(
+            const SizedBox(height: 30),
+            const Text("#2415867 Order No."),
+            const SizedBox(height: 15),
+            const Text(
               "We've successfully accepted\nyour order!",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,

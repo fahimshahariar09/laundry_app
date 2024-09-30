@@ -117,6 +117,7 @@ class CartScreen extends StatelessWidget {
                   )
                 : const CircularProgressIndicator()),
             CommonButton(buttonName: "Confram Order", onTap: () {
+              // ignore: prefer_const_constructors
               Get.to(ConframOrder());
              // Get.snackbar("message", "order success");
             }),

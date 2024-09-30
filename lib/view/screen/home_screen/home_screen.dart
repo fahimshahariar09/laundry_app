@@ -6,7 +6,6 @@ import 'package:laundry/constants/images.dart';
 import 'package:laundry/controller/ui_controller/home/home_screen.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/category/category_detalis.dart';
-import 'package:laundry/view/screen/home_screen/widget/home_card_view.dart';
 import 'package:laundry/view/screen/home_screen/widget/home_category_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -44,7 +43,12 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      CommonText(titel: "Iron"),
+                      const SizedBox(height: 3),
+                      const CommonText(
+                        titel: "Iron",
+                        fSize: 16,
+                        fWeight: FontWeight.w500,
+                      ),
                     ],
                   ),
                   Column(
@@ -61,7 +65,12 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      CommonText(titel: "wash"),
+                      const SizedBox(height: 3),
+                      const CommonText(
+                        titel: "Wash",
+                        fSize: 16,
+                        fWeight: FontWeight.w500,
+                      ),
                     ],
                   ),
                   Column(
@@ -73,12 +82,17 @@ class HomeScreen extends StatelessWidget {
                           width: 110,
                           color: Colors.white,
                           child: Image.asset(
-                            AppImages.iron,
+                            AppImages.dry,
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
-                      CommonText(titel: "Iron"),
+                      const SizedBox(height: 3),
+                      const CommonText(
+                        titel: "Dry Clean",
+                        fSize: 16,
+                        fWeight: FontWeight.w500,
+                      ),
                     ],
                   )
                 ],

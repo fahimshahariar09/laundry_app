@@ -17,9 +17,9 @@ class ProfileScreen extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                Get.to(ProfileEdit());
+                Get.to(const ProfileEdit());
               },
-              icon: Icon(Icons.edit))
+              icon: const Icon(Icons.edit))
         ],
       ),
       body: SafeArea(
@@ -139,7 +139,7 @@ class ProfileScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 CommonButton(buttonName: "Save", buttonWidth: 200, onTap: () {})
