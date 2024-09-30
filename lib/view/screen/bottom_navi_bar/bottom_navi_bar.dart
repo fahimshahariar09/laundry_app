@@ -41,7 +41,6 @@ class BottomNaviBar extends StatelessWidget {
                 buildBottomBarItem(icon: Icons.home, label: "Home"),
                 buildBottomBarItem(icon: Icons.shopping_cart_outlined, label: "Cart"),
                 buildBottomBarItem(icon: Icons.person, label: "profile"),
-                buildBottomBarItem(icon: Icons.settings, label: "Setting"),
               ],
               onTap: (index) {
                 bottomNaviBarController.pageController.jumpToPage(index);

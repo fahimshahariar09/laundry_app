@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/category/add_to_cart_show.dart';
 import 'package:laundry/view/common_widget/common_button.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
+import 'package:laundry/view/screen/order/confram_order.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -116,6 +117,7 @@ class CartScreen extends StatelessWidget {
                   )
                 : const CircularProgressIndicator()),
             CommonButton(buttonName: "Confram Order", onTap: () {
+              Get.to(ConframOrder());
              // Get.snackbar("message", "order success");
             }),
             const SizedBox(height: 100,)

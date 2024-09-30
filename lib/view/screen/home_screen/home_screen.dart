@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:laundry/constants/images.dart';
 import 'package:laundry/controller/ui_controller/home/home_screen.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/category/category_detalis.dart';
@@ -25,23 +26,35 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 15),
-            Obx(() => SizedBox(
-                  height: 165,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: homeScreenController.homedemoData.length,
-                      shrinkWrap: true,
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(5),
-                          child: HomeCardView(
-                              imageurl:
-                                  "${homeScreenController.homedemoData[index].image}",
-                              titel:
-                                  "${homeScreenController.homedemoData[index].name}"),
-                        );
-                      }),
-                )),
+            Row(
+              children: [
+              Column(
+                children: [
+                  Container(
+                    child: Image.asset(AppImages.iron),
+                  ),
+                  Text("data")
+                ],
+              )
+              ],
+            ),
+            // Obx(() => SizedBox(
+            //       height: 165,
+            //       child: ListView.builder(
+            //           scrollDirection: Axis.horizontal,
+            //           itemCount: homeScreenController.homedemoData.length,
+            //           shrinkWrap: true,
+            //           itemBuilder: (context, index) {
+            //             return Padding(
+            //               padding: const EdgeInsets.all(5),
+            //               child: HomeCardView(
+            //                   imageurl:
+            //                       "${homeScreenController.homedemoData[index].image}",
+            //                   titel:
+            //                       "${homeScreenController.homedemoData[index].name}"),
+            //             );
+            //           }),
+            //     )),
             const SizedBox(height: 25),
             const Row(
               children: [

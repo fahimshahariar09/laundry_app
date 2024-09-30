@@ -10,7 +10,7 @@ class BottomNaviBarController extends GetxController {
   final NotchBottomBarController nController =
       NotchBottomBarController(index: 0);
   RxInt index = 0.obs;
-  RxInt maxCount = 4.obs;
+  RxInt maxCount = 3.obs;
   RxInt page = 0.obs;
 
   @override
