@@ -26,17 +26,63 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 15),
-            Row(
-              children: [
-              Column(
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
                 children: [
-                  Container(
-                    child: Image.asset(AppImages.iron),
+                  Column(
+                    children: [
+                      Card(
+                        elevation: 2,
+                        child: Container(
+                          height: 100,
+                          width: 110,
+                          color: Colors.white,
+                          child: Image.asset(
+                            AppImages.iron,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      CommonText(titel: "Iron"),
+                    ],
                   ),
-                  Text("data")
+                  Column(
+                    children: [
+                      Card(
+                        elevation: 2,
+                        child: Container(
+                          height: 100,
+                          width: 110,
+                          color: Colors.white,
+                          child: Image.asset(
+                            AppImages.wash,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      CommonText(titel: "wash"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Card(
+                        elevation: 2,
+                        child: Container(
+                          height: 100,
+                          width: 110,
+                          color: Colors.white,
+                          child: Image.asset(
+                            AppImages.iron,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      CommonText(titel: "Iron"),
+                    ],
+                  )
                 ],
-              )
-              ],
+              ),
             ),
             // Obx(() => SizedBox(
             //       height: 165,
@@ -76,11 +122,11 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(5),
                   child: ListView.builder(
                       shrinkWrap: true,
-                     scrollDirection: Axis.vertical,
+                      scrollDirection: Axis.vertical,
                       itemCount: homeScreenController.homecategories.length,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding:  const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: HomeCategoryCard(
                             image:
                                 "${homeScreenController.homecategories[index].imageurl}",
