@@ -33,13 +33,18 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Card(
                         elevation: 2,
-                        child: Container(
-                          height: 100,
-                          width: 110,
-                          color: Colors.white,
-                          child: Image.asset(
-                            AppImages.iron,
-                            fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: () {
+
+                          },
+                          child: Container(
+                            height: 100,
+                            width: 110,
+                            color: Colors.white,
+                            child: Image.asset(
+                              AppImages.iron,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
