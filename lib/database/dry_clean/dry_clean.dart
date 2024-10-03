@@ -1,6 +1,6 @@
 class DryCleanList {
   static Map<String, dynamic> drycleanList = {
-    "homecategories": [
+    "drycleancategories": [
       {
         "imageurl":
         "assets/category/t-shirt.png",
