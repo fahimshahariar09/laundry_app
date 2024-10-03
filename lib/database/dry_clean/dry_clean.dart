@@ -1,5 +1,5 @@
-class HomeCategoryList {
-  static Map<String, dynamic> homecategoryList = {
+class DryCleanList {
+  static Map<String, dynamic> drycleanList = {
     "homecategories": [
       {
         "imageurl":
