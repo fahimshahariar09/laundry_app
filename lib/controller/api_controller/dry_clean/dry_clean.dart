@@ -1,11 +1,15 @@
 
 import 'dart:developer';
 
+import 'package:laundry/model/dry_clean/dry_clean.dart';
+
 class DryCleanService {
-  static Future drycleanService() async {
-    try {} catch (e) {
+  static Future<DryCleanModel?> drycleanService() async {
+    try {
+
+    } catch (e) {
       log("error $e");
     }
-    return;
+    return null;
   }
 }
