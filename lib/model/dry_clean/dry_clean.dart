@@ -1,34 +1,34 @@
-class HomeCategoryModel {
-  List<HomeCategories>? homecategories;
+class DryCleanModel {
+  List<DryCleanCategories>? drycleancategories;
 
-  HomeCategoryModel({this.homecategories});
+  DryCleanModel({this.drycleancategories});
 
-  HomeCategoryModel.fromJson(Map<String, dynamic> json) {
+  DryCleanModel.fromJson(Map<String, dynamic> json) {
     if (json['homecategories'] != null) {
-      homecategories = <HomeCategories>[];
+      drycleancategories = <DryCleanCategories>[];
       json['homecategories'].forEach((v) {
-        homecategories!.add(HomeCategories.fromJson(v));
+        drycleancategories!.add(DryCleanCategories.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    if (homecategories != null) {
-      data['homecategories'] = homecategories!.map((v) => v.toJson()).toList();
+    if (drycleancategories != null) {
+      data['homecategories'] = drycleancategories!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
-class HomeCategories {
+class DryCleanCategories {
   String? imageurl;
   String? titel;
   String? subtitel;
 
-  HomeCategories({this.imageurl, this.titel, this.subtitel});
+  DryCleanCategories({this.imageurl, this.titel, this.subtitel});
 
-  HomeCategories.fromJson(Map<String, dynamic> json) {
+  DryCleanCategories.fromJson(Map<String, dynamic> json) {
     imageurl = json['imageurl'];
     titel = json['titel'];
     subtitel = json['subtitel'];
