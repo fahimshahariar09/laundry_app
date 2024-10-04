@@ -7,8 +7,8 @@ import 'package:laundry/model/home/home_demo_model.dart';
 class HomeDemoService {
   static Future<HomeDemoModel?> homedemoService() async {
     try {
-
-      HomeDemoModel data = HomeDemoModel.fromJson(jsonDecode(jsonEncode(HomeDemoList.homedemoList)));
+      HomeDemoModel data = HomeDemoModel.fromJson(
+          jsonDecode(jsonEncode(HomeDemoList.homedemoList)));
       return data;
     } catch (e) {
       log("error :$e");
