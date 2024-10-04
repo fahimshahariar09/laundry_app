@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:laundry/controller/ui_controller/dry_clean/dry_clean.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/dry_clean/widget/dry_clean_view_card.dart';
 
@@ -7,16 +9,22 @@ class DryCleanPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DryCleanController dryCleanController =Get.put(DryCleanController());
     return Scaffold(
       body: Column(
         children: [
-          ListView.builder(itemBuilder: (context, index) {
-            return DryCleanViewCard(
-                onTap: () {},
-                image: "image",
-                titel: "titel",
-                subtitel: "subtitel");
-          })
+          Obx(()=>Expanded(
+            child: ListView.builder(
+                itemCount: dryCleanController.drycleancategories.length,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return DryCleanViewCard(
+                      onTap: () {},
+                      image: "image",
+                      titel: "titel",
+                      subtitel: "subtitel");
+                }),
+          ),),
           // Container(
           //   height: 120,
           //   decoration: BoxDecoration(
