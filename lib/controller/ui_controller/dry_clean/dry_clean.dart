@@ -12,11 +12,9 @@ class DryCleanController extends GetxController {
 
   dryCleanFun() async {
     isLoading.value = true;
-    log("..........start.........");
     var dryclean = await DryCleanService.drycleanService();
     drycleancategories.value = dryclean?.drycleancategories ?? [];
     isLoading.value = false;
-    log(".........end..........");
 
   }
 
