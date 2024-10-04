@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/dry_clean/dry_clean.dart';
@@ -16,11 +18,13 @@ class DryCleanPage extends StatelessWidget {
           Obx(()=>Expanded(
             child: ListView.builder(
                 itemCount: dryCleanController.drycleancategories.length,
+                scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
+                  log("message");
                   return DryCleanViewCard(
                       onTap: () {},
-                      image: "image",
+                      image: "${dryCleanController.drycleancategories[index].imageurl}",
                       titel: "titel",
                       subtitel: "subtitel");
                 }),
