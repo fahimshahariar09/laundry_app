@@ -19,4 +19,10 @@ class DryCleanController extends GetxController {
     log(".........end..........");
 
   }
+
+  @override
+  void onInit() {
+    dryCleanFun();
+    super.onInit();
+  }
 }
