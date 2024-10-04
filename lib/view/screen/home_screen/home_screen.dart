@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,6 +5,7 @@ import 'package:laundry/constants/images.dart';
 import 'package:laundry/controller/ui_controller/home/home_screen.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/category/category_detalis.dart';
+import 'package:laundry/view/screen/dry_clean/dry_clean_page.dart';
 import 'package:laundry/view/screen/home_screen/widget/home_category_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -34,9 +34,7 @@ class HomeScreen extends StatelessWidget {
                       Card(
                         elevation: 2,
                         child: InkWell(
-                          onTap: () {
-
-                          },
+                          onTap: () {},
                           child: Container(
                             height: 100,
                             width: 110,
@@ -60,13 +58,16 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Card(
                         elevation: 2,
-                        child: Container(
-                          height: 100,
-                          width: 110,
-                          color: Colors.white,
-                          child: Image.asset(
-                            AppImages.wash,
-                            fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: () {},
+                          child: Container(
+                            height: 100,
+                            width: 110,
+                            color: Colors.white,
+                            child: Image.asset(
+                              AppImages.wash,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -82,13 +83,18 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Card(
                         elevation: 2,
-                        child: Container(
-                          height: 100,
-                          width: 110,
-                          color: Colors.white,
-                          child: Image.asset(
-                            AppImages.dry,
-                            fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: () {
+                            Get.to(const DryCleanPage());
+                          },
+                          child: Container(
+                            height: 100,
+                            width: 110,
+                            color: Colors.white,
+                            child: Image.asset(
+                              AppImages.dry,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -155,7 +161,6 @@ class HomeScreen extends StatelessWidget {
                                 "${homeScreenController.homecategories[index].subtitel}",
                             onTap: () {
                               Get.to(const CategoryDetalis());
-                              log("message");
                             },
                           ),
                         );

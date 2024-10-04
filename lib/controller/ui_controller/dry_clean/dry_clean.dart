@@ -1,5 +1,4 @@
 
-import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:laundry/controller/api_controller/dry_clean/dry_clean.dart';

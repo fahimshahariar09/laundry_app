@@ -26,7 +26,7 @@ class WashPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 30),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
