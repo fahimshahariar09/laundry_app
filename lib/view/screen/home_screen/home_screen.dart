@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                         elevation: 2,
                         child: InkWell(
                           onTap: () {
-                            Get.to(IronPage());
+                            Get.to(const IronPage());
                           },
                           child: Container(
                             height: 100,
@@ -111,23 +111,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            // Obx(() => SizedBox(
-            //       height: 165,
-            //       child: ListView.builder(
-            //           scrollDirection: Axis.horizontal,
-            //           itemCount: homeScreenController.homedemoData.length,
-            //           shrinkWrap: true,
-            //           itemBuilder: (context, index) {
-            //             return Padding(
-            //               padding: const EdgeInsets.all(5),
-            //               child: HomeCardView(
-            //                   imageurl:
-            //                       "${homeScreenController.homedemoData[index].image}",
-            //                   titel:
-            //                       "${homeScreenController.homedemoData[index].name}"),
-            //             );
-            //           }),
-            //     )),
+
             const SizedBox(height: 25),
             const Row(
               children: [
