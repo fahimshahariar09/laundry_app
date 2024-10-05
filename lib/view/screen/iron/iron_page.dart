@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:laundry/controller/ui_controller/iron/iron.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
+import 'package:laundry/view/screen/iron/widget/iron_view_card.dart';
 
 class IronPage extends StatelessWidget {
   const IronPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    IronController ironController = Get.put(IronController());
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             ListView.builder(
+                itemCount: ironController.ironcategories.length,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-              return;
-            }),
+                  var data = ironController.ironcategories[index];
+                  return IronViewCard(
+                      onTap: () {},
+                      image: "${data.imageurl}",
+                      titel: "${data.titel}",
+                      subtitel: "${data.subtitel}");
+                }),
             // Container(
             //   height: 120,
             //   decoration: BoxDecoration(
