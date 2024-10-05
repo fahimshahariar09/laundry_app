@@ -1,34 +1,34 @@
-class DryCleanModel {
-  List<DryCleanCategories>? drycleancategories;
+class IronModel {
+  List<IronCategories>? ironcategories;
 
-  DryCleanModel({this.drycleancategories});
+  IronModel({this.ironcategories});
 
-  DryCleanModel.fromJson(Map<String, dynamic> json) {
-    if (json['drycleancategories'] != null) {
-      drycleancategories = <DryCleanCategories>[];
-      json['drycleancategories'].forEach((v) {
-        drycleancategories!.add(DryCleanCategories.fromJson(v));
+  IronModel.fromJson(Map<String, dynamic> json) {
+    if (json['ironcategories'] != null) {
+      ironcategories = <IronCategories>[];
+      json['ironcategories'].forEach((v) {
+        ironcategories!.add(IronCategories.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    if (drycleancategories != null) {
-      data['drycleancategories'] = drycleancategories!.map((v) => v.toJson()).toList();
+    if (ironcategories != null) {
+      data['ironcategories'] = ironcategories!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
-class DryCleanCategories {
+class IronCategories {
   String? imageurl;
   String? titel;
   String? subtitel;
 
-  DryCleanCategories({this.imageurl, this.titel, this.subtitel});
+  IronCategories({this.imageurl, this.titel, this.subtitel});
 
-  DryCleanCategories.fromJson(Map<String, dynamic> json) {
+  IronCategories.fromJson(Map<String, dynamic> json) {
     imageurl = json['imageurl'];
     titel = json['titel'];
     subtitel = json['subtitel'];

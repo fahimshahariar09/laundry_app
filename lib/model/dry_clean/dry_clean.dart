@@ -42,3 +42,4 @@ class DryCleanCategories {
     return data;
   }
 }
+
