@@ -9,6 +9,7 @@ class IronService {
     try {
       IronModel iron =
           IronModel.fromJson(jsonDecode(jsonEncode(IronList.ironList)));
+      return iron;
     } catch (e) {
       log(" error $e");
     }
