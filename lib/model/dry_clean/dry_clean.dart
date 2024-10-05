@@ -15,7 +15,8 @@ class DryCleanModel {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (drycleancategories != null) {
-      data['drycleancategories'] = drycleancategories!.map((v) => v.toJson()).toList();
+      data['drycleancategories'] =
+          drycleancategories!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -42,4 +43,3 @@ class DryCleanCategories {
     return data;
   }
 }
-

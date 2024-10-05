@@ -5,9 +5,9 @@ import 'package:laundry/database/dry_clean/dry_clean.dart';
 import 'package:laundry/model/dry_clean/dry_clean.dart';
 
 class DryCleanService {
-  static Future<IronModel?> drycleanService() async {
+  static Future<DryCleanModel?> drycleanService() async {
     try {
-      IronModel model = IronModel.fromJson(
+      DryCleanModel model = DryCleanModel.fromJson(
           jsonDecode(jsonEncode(DryCleanList.drycleanList)));
       return model;
     } catch (e) {

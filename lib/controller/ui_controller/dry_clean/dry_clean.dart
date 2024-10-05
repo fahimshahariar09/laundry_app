@@ -5,14 +5,14 @@ import 'package:laundry/controller/api_controller/dry_clean/dry_clean.dart';
 import 'package:laundry/model/dry_clean/dry_clean.dart';
 
 class DryCleanController extends GetxController {
-  RxList<IronCategories> drycleancategories = <IronCategories>[].obs;
+  RxList<DryCleanCategories> drycleancategories = <DryCleanCategories>[].obs;
 
   RxBool isLoading = false.obs;
 
   dryCleanFun() async {
     isLoading.value = true;
     var dryclean = await DryCleanService.drycleanService();
-    drycleancategories.value = dryclean?.ironcategories ?? [];
+    drycleancategories.value = dryclean?.drycleancategories ?? [];
     isLoading.value = false;
 
   }
