@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:laundry/view/screen/iron/iron_page.dart';
 import 'package:laundry/view/screen/splash/splash_screen.dart';
 
 void main(){
