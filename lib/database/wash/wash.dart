@@ -1,6 +1,6 @@
 class WashList {
   static Map<String, dynamic> washList = {
-    "ironcategories": [
+    "washcategories": [
       {
         "imageurl":
         "assets/category/t-shirt.png",
