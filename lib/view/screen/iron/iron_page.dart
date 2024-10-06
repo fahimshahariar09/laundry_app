@@ -13,17 +13,19 @@ class IronPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            ListView.builder(
-                itemCount: ironController.ironcategories.length,
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  var data = ironController.ironcategories[index];
-                  return IronViewCard(
-                      onTap: () {},
-                      image: "${data.imageurl}",
-                      titel: "${data.titel}",
-                      subtitel: "${data.subtitel}");
-                }),
+            Obx(()=>Expanded(
+              child: ListView.builder(
+                  itemCount: ironController.ironcategories.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    var data = ironController.ironcategories[index];
+                    return IronViewCard(
+                        onTap: () {},
+                        image: "${data.imageurl}",
+                        titel: "${data.titel}",
+                        subtitel: "${data.subtitel}");
+                  }),
+            )),
             // Container(
             //   height: 120,
             //   decoration: BoxDecoration(

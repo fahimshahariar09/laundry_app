@@ -12,4 +12,11 @@ class IronController extends GetxController {
     ironcategories.value = iron?.ironcategories ?? [];
     isLoading.value = false;
   }
+
+  @override
+  void onInit() {
+    ironFun();
+    super.onInit();
+  }
+
 }
