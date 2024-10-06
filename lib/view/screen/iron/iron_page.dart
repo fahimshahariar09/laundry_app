@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/iron/iron.dart';
-import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/iron/widget/iron_view_card.dart';
 
 class IronPage extends StatelessWidget {
