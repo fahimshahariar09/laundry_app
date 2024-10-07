@@ -7,9 +7,9 @@ import 'package:laundry/model/wash/wash.dart';
 class WashService {
   static Future<WashModel?> washservice() async {
     try {
-      WashModel wash =
+      WashModel data =
           WashModel.fromJson(jsonDecode(jsonEncode(WashList.washList)));
-      return wash;
+      return data;
     } catch (e) {
       log("error :$e");
     }
