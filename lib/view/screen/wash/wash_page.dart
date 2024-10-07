@@ -17,19 +17,24 @@ class WashPage extends StatelessWidget {
           children: [
             Obx(
               () => Expanded(
-                child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
-                    itemCount: washController.washcategories.length,
-                    itemBuilder: (context, index) {
-                      var data =washController.washcategories[index];
-                      return WashViewCard(
-                          onTap: () {},
-                          image:
-                              "${data.imageurl}",
-                          titel: "${data.titel}",
-                          subtitel: "${data.subtitel}");
-                    }),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      itemCount: washController.washcategories.length,
+                      itemBuilder: (context, index) {
+                        var data = washController.washcategories[index];
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5),
+                          child: WashViewCard(
+                              onTap: () {},
+                              image: "${data.imageurl}",
+                              titel: "${data.titel}",
+                              subtitel: "${data.subtitel}"),
+                        );
+                      }),
+                ),
               ),
             ),
           ],
