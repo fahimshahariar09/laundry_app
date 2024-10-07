@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:laundry/view/screen/iron/iron_page.dart';
-import 'package:laundry/view/screen/splash/splash_screen.dart';
+import 'package:laundry/view/screen/wash/wash_page.dart';
 
 void main(){
   runApp(const MyApp());
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  SplashScreen(),
+      home:  WashPage(),
     );
   }
 }

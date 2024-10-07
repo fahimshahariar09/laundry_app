@@ -12,4 +12,10 @@ class WashController extends GetxController {
     washcategories.value = wash?.washcategories ?? [];
     isLoading.value = false;
   }
+
+  @override
+  void onInit() {
+    washFun();
+    super.onInit();
+  }
 }

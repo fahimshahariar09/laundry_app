@@ -13,15 +13,19 @@ class WashPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          ListView.builder(
-              itemCount: washController.washcategories.length,
-              itemBuilder: (context, index) {
-            return WashViewCard(
-                onTap: () {},
-                image: "image",
-                titel: "titel",
-                subtitel: "subtitel");
-          })
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                itemCount: washController.washcategories.length,
+                itemBuilder: (context, index) {
+                  return WashViewCard(
+                      onTap: () {},
+                      image: "image",
+                      titel: "titel",
+                      subtitel: "subtitel");
+                }),
+          )
           // Container(
           //   height: 120,
           //   decoration: BoxDecoration(
