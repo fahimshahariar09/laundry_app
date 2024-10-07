@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/wash/wash.dart';
-import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/wash/widget/wash_view_card.dart';
 
 class WashPage extends StatelessWidget {
