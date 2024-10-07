@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:laundry/controller/ui_controller/wash/wash.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/wash/widget/wash_view_card.dart';
 
@@ -7,10 +9,13 @@ class WashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WashController washController = Get.put(WashController());
     return Scaffold(
       body: Column(
         children: [
-          ListView.builder(itemBuilder: (context, index) {
+          ListView.builder(
+              itemCount: washController.washcategories.length,
+              itemBuilder: (context, index) {
             return WashViewCard(
                 onTap: () {},
                 image: "image",

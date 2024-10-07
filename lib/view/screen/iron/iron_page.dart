@@ -27,7 +27,7 @@ class IronPage extends StatelessWidget {
                         padding: const EdgeInsets.all(5),
                         child: IronViewCard(
                             onTap: () {
-                              Get.to(CategoryDetalis());
+                              Get.to(const CategoryDetalis());
                             },
                             image: "${data.imageurl}",
                             titel: "${data.titel}",
