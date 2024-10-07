@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laundry/controller/ui_controller/iron/iron.dart';
+import 'package:laundry/view/screen/category/category_detalis.dart';
 import 'package:laundry/view/screen/iron/widget/iron_view_card.dart';
 
 class IronPage extends StatelessWidget {
@@ -25,7 +26,9 @@ class IronPage extends StatelessWidget {
                       return Padding(
                         padding: const EdgeInsets.all(5),
                         child: IronViewCard(
-                            onTap: () {},
+                            onTap: () {
+                              Get.to(CategoryDetalis());
+                            },
                             image: "${data.imageurl}",
                             titel: "${data.titel}",
                             subtitel: "${data.subtitel}"),

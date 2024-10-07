@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
+import 'package:laundry/view/screen/wash/widget/wash_view_card.dart';
 
 class WashPage extends StatelessWidget {
   const WashPage({super.key});
@@ -10,7 +11,11 @@ class WashPage extends StatelessWidget {
       body: Column(
         children: [
           ListView.builder(itemBuilder: (context, index) {
-            return;
+            return WashViewCard(
+                onTap: () {},
+                image: "image",
+                titel: "titel",
+                subtitel: "subtitel");
           })
           // Container(
           //   height: 120,
