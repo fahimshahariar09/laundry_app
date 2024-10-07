@@ -10,7 +10,8 @@ class WashController extends GetxController{
   RxBool isLoading =true.obs;
 
   washFun()async{
-    var wash = WashService.washservice();
+    var wash = await WashService.washservice();
+    washcategories.value = wash?.washcategories ?? [];
 
   }
 
