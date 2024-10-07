@@ -11,50 +11,29 @@ class WashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     WashController washController = Get.put(WashController());
     return Scaffold(
-      body: Column(
-        children: [
-          Obx(()=>Expanded(
-            child: ListView.builder(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                itemCount: washController.washcategories.length,
-                itemBuilder: (context, index) {
-                  return WashViewCard(
-                      onTap: () {},
-                      image: "${washController.washcategories[index].imageurl}",
-                      titel: "titel",
-                      subtitel: "subtitel");
-                }),
-          ),),
-          // Container(
-          //   height: 120,
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(10),
-          //       color: Colors.white
-          //   ),
-          //   child: Row(
-          //     children: [
-          //       Padding(
-          //         padding: const EdgeInsets.all(5),
-          //         child: SizedBox(
-          //           height: 80,
-          //           width: 80,
-          //           child: Image.asset("assets/icon/dry.png",fit: BoxFit.cover,),
-          //         ),
-          //       ),
-          //       const SizedBox(width: 30),
-          //       const Column(
-          //         crossAxisAlignment: CrossAxisAlignment.center,
-          //         mainAxisAlignment: MainAxisAlignment.center,
-          //         children: [
-          //           CommonText(titel: "titel",fSize: 20,),
-          //           CommonText(titel: "subtitel",fSize: 15,),
-          //         ],
-          //       )
-          //     ],
-          //   ),
-          // )
-        ],
+      backgroundColor: const Color(0xff6DA0C2),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Obx(
+              () => Expanded(
+                child: ListView.builder(
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    itemCount: washController.washcategories.length,
+                    itemBuilder: (context, index) {
+                      var data =washController.washcategories[index];
+                      return WashViewCard(
+                          onTap: () {},
+                          image:
+                              "${data.imageurl}",
+                          titel: "${data.titel}",
+                          subtitel: "${data.subtitel}");
+                    }),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
