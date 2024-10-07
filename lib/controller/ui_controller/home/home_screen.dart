@@ -1,7 +1,6 @@
 
 import 'package:get/get.dart';
 import 'package:laundry/controller/api_controller/home/home_category.dart';
-import 'package:laundry/controller/api_controller/home/home_demo.dart';
 import 'package:laundry/model/home/home_category_model.dart';
 import 'package:laundry/model/home/home_demo_model.dart';
 
@@ -20,18 +19,9 @@ class HomeScreenController extends GetxController {
   }
 
 
-  homedemoFun() async {
-    isLoading.value = true;
-    var homedemo = await HomeDemoService.homedemoService();
-    homedemoData.value = homedemo?.homedemoData ?? [];
-    isLoading.value = false;
-  }
-
-
   @override
   void onInit() {
     homecategoryFun();
-    homedemoFun();
     super.onInit();
   }
 }

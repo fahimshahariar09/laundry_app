@@ -7,6 +7,7 @@ import 'package:laundry/view/screen/category/category_detalis.dart';
 import 'package:laundry/view/screen/dry_clean/dry_clean_page.dart';
 import 'package:laundry/view/screen/home_screen/widget/home_category_card.dart';
 import 'package:laundry/view/screen/iron/iron_page.dart';
+import 'package:laundry/view/screen/wash/wash_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -61,7 +62,9 @@ class HomeScreen extends StatelessWidget {
                       Card(
                         elevation: 2,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Get.to(const WashPage());
+                          },
                           child: Container(
                             height: 100,
                             width: 110,
@@ -111,7 +114,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
             const SizedBox(height: 25),
             const Row(
               children: [
