@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:laundry/constants/icon.dart';
 import 'package:laundry/view/common_widget/common_button.dart';
-import 'package:laundry/view/screen/profile/profile_edit.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -17,7 +15,6 @@ class ProfileScreen extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                Get.to(const ProfileEdit());
               },
               icon: const Icon(Icons.edit))
         ],
