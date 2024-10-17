@@ -7,18 +7,24 @@ class SignInController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   RxBool isLoading = false.obs;
+  //RxBool isVisibility = true.obs;
+
+  // void toggleVisibility() {
+  //   isVisibility.value = !isVisibility.value;
+  // }
 
   signinFun() async {
-    isLoading.value =true;
+    isLoading.value = true;
     bool status = await SignInService.signinService(
         email: emailController.text, password: passwordController.text);
-    isLoading.value=false;
+    isLoading.value = false;
     return status;
   }
+
   @override
   void onInit() {
-    emailController.text ="fahim@gmail.com";
-    passwordController.text ="12345678";
+    emailController.text = "fahim@gmail.com";
+    passwordController.text = "12345678";
     super.onInit();
   }
 

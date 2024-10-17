@@ -11,6 +11,7 @@ class PasswordTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: passController,
+      obscureText: true,
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
@@ -26,7 +27,7 @@ class PasswordTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         labelText: "Password",
-        suffixIcon: icon ?? const Icon(Icons.visibility),
+        suffixIcon: icon ?? Icon(Icons.visibility),
       ),
       validator: (value) {
         if (value == '' || value == null) {
