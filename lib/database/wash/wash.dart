@@ -3,9 +3,9 @@ class WashList {
     "washcategories": [
       {
         "imageurl":
-        "assets/category/t-shirt.png",
-        "titel": "T-Shirts clothes",
-        "subtitel": "T-shirts,Polo-Shirts"
+        "assets/category/blazer.png",
+        "titel": "Blazer",
+        "subtitel": "Jacket Blazer,Shirts"
       },
       {
         "imageurl":
@@ -18,12 +18,6 @@ class WashList {
         "assets/category/jeans.png.png",
         "titel": "Suits",
         "subtitel": "Jeans Pants,Jersy"
-      },
-      {
-        "imageurl":
-        "assets/category/blazer.png",
-        "titel": "Blazer",
-        "subtitel": "Jacket Blazer,Shirts"
       },
       {
         "imageurl":

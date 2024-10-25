@@ -3,9 +3,15 @@ class DryCleanList {
     "drycleancategories": [
       {
         "imageurl":
-        "assets/category/t-shirt.png",
-        "titel": "T-Shirts clothes",
-        "subtitel": "T-shirts,Polo-Shirts"
+        "assets/category/blankets.png",
+        "titel": "Blankets Textiles",
+        "subtitel": "Blankets,Bedsheets,more"
+      },
+      {
+        "imageurl":
+        "assets/category/silk saree.png.png",
+        "titel": "Household Textiles",
+        "subtitel": "Silk Saree,Bedsheets,"
       },
       {
         "imageurl":
@@ -24,18 +30,6 @@ class DryCleanList {
         "assets/category/blazer.png",
         "titel": "Blazer",
         "subtitel": "Jacket Blazer,Shirts"
-      },
-      {
-        "imageurl":
-        "assets/category/blankets.png",
-        "titel": "Blankets Textiles",
-        "subtitel": "Blankets,Bedsheets,more"
-      },
-      {
-        "imageurl":
-        "assets/category/silk saree.png.png",
-        "titel": "Household Textiles",
-        "subtitel": "Silk Saree,Bedsheets,"
       }
     ]
   };

@@ -3,12 +3,6 @@ class HomeCategoryList {
     "homecategories": [
       {
         "imageurl":
-            "assets/category/t-shirt.png",
-        "titel": "T-Shirts clothes",
-        "subtitel": "T-shirts,Polo-Shirts"
-      },
-      {
-        "imageurl":
             "assets/category/shirts.png.png",
         "titel": "Shirts",
         "subtitel": "Shirts,more"
@@ -18,6 +12,12 @@ class HomeCategoryList {
             "assets/category/jeans.png.png",
         "titel": "Suits",
         "subtitel": "Jeans Pants,Jersy"
+      },
+      {
+        "imageurl":
+        "assets/category/t-shirt.png",
+        "titel": "T-Shirts clothes",
+        "subtitel": "T-shirts,Polo-Shirts"
       },
       {
         "imageurl":
