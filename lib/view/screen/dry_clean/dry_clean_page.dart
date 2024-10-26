@@ -12,6 +12,10 @@ class DryCleanPage extends StatelessWidget {
     DryCleanController dryCleanController = Get.put(DryCleanController());
     return Scaffold(
       backgroundColor: const Color(0xff6DA0C2),
+      appBar: AppBar(
+        title: const Text("Dry Clean"),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
           Obx(

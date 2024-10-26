@@ -3,6 +3,12 @@ class HomeCategoryList {
     "homecategories": [
       {
         "imageurl":
+        "assets/category/blazer.png",
+        "titel": "Blazer",
+        "subtitel": "Jacket Blazer,Shirts"
+      },
+      {
+        "imageurl":
             "assets/category/shirts.png.png",
         "titel": "Shirts",
         "subtitel": "Shirts,more"
@@ -18,12 +24,6 @@ class HomeCategoryList {
         "assets/category/t-shirt.png",
         "titel": "T-Shirts clothes",
         "subtitel": "T-shirts,Polo-Shirts"
-      },
-      {
-        "imageurl":
-            "assets/category/blazer.png",
-        "titel": "Blazer",
-        "subtitel": "Jacket Blazer,Shirts"
       },
       {
         "imageurl":

@@ -3,9 +3,9 @@ class AddToCartShowList {
     "addtocartShow": [
       {
         "image":
-            "assets/category/t-shirt.png",
-        "name": "T-shirts",
-        "price": "Price-5\$"
+            "assets/category/blazer.png",
+        "name": "Blazer",
+        "price": "Price-6\$"
       }
     ]
   };

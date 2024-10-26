@@ -11,6 +11,8 @@ class WashPage extends StatelessWidget {
     WashController washController = Get.put(WashController());
     return Scaffold(
       backgroundColor: const Color(0xff6DA0C2),
+      appBar: AppBar(title: const Text("Wash"),centerTitle: true,),
+
       body: SafeArea(
         child: Column(
           children: [

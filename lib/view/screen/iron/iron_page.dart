@@ -12,6 +12,7 @@ class IronPage extends StatelessWidget {
     IronController ironController = Get.put(IronController());
     return Scaffold(
       backgroundColor: const Color(0xff6DA0C2),
+      appBar: AppBar(title: const Text("Iron"),centerTitle: true,),
       body: SafeArea(
         child: Column(
           children: [

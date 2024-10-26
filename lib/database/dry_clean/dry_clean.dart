@@ -3,6 +3,12 @@ class DryCleanList {
     "drycleancategories": [
       {
         "imageurl":
+        "assets/category/blazer.png",
+        "titel": "Blazer",
+        "subtitel": "Jacket Blazer,Shirts"
+      },
+      {
+        "imageurl":
         "assets/category/blankets.png",
         "titel": "Blankets Textiles",
         "subtitel": "Blankets,Bedsheets,more"
@@ -24,12 +30,6 @@ class DryCleanList {
         "assets/category/jeans.png.png",
         "titel": "Suits",
         "subtitel": "Jeans Pants,Jersy"
-      },
-      {
-        "imageurl":
-        "assets/category/blazer.png",
-        "titel": "Blazer",
-        "subtitel": "Jacket Blazer,Shirts"
       }
     ]
   };

@@ -16,6 +16,7 @@ class ConframOrder extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: (){
+                Future.delayed(Duration(seconds: 3));
                 Get.off(const BottomNaviBar());
               },
               child: const ConfirmationSuccess(
