@@ -1,7 +1,7 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:laundry/view/screen/cart/cart_screen%20.dart';
+import 'package:laundry/view/screen/cart/cart_screen.dart';
 import 'package:laundry/view/screen/home_screen/home_screen.dart';
 import 'package:laundry/view/screen/profile/profile_screen.dart';
 
