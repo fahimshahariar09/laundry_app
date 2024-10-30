@@ -16,18 +16,24 @@ class Setting extends StatelessWidget {
         child: Column(
           children: [
             Obx(
-              () => ListTile(
-                title: Text("DarkMode".tr),
-                trailing: Switch(
-                    value: settingController.isLightTheme.value,
-                    activeColor: Colors.grey,
-                    activeTrackColor: Colors.white,
-                    inactiveThumbColor: Colors.black,
-                    onChanged: (value) {
-                      settingController.changeThemeFun();
-                    }),
+              () => Container(
+                height: 50,
+                width: MediaQuery.sizeOf(context).width,
+                color: Colors.grey,
+                child: ListTile(
+                  title: Text("DarkMode".tr),
+                  trailing: Switch(
+                      value: settingController.isLightTheme.value,
+                      activeColor: Colors.grey,
+                      activeTrackColor: Colors.white,
+                      inactiveThumbColor: Colors.black,
+                      onChanged: (value) {
+                        settingController.changeThemeFun();
+                      }),
+                ),
               ),
-            )
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),
