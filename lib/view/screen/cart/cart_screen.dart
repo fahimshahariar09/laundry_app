@@ -4,7 +4,6 @@ import 'package:laundry/controller/ui_controller/category/add_to_cart_show.dart'
 import 'package:laundry/view/common_widget/common_button.dart';
 import 'package:laundry/view/common_widget/common_text.dart';
 import 'package:laundry/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
-import 'package:laundry/view/screen/home_screen/home_screen.dart';
 import 'package:laundry/view/screen/order/confram_order.dart';
 
 class CartScreen extends StatelessWidget {
@@ -123,16 +122,12 @@ class CartScreen extends StatelessWidget {
             CommonButton(
                 buttonName: "Confram Order",
                 onTap: () {
-                  // ignore: prefer_const_constructors
-                  Get.to(ConframOrder());
-                  // Get.snackbar("message", "order success");
+                  Get.to(const ConframOrder());
                 }),
             CommonButton(
-                buttonName: " Order cencle",
+                buttonName: " Order Cancle",
                 onTap: () {
-                  // ignore: prefer_const_constructors
-                  Get.to(BottomNaviBar());
-                  // Get.snackbar("message", "order success");
+                  Get.to(const BottomNaviBar());
                 }),
             const SizedBox(
               height: 100,

@@ -4,6 +4,7 @@ import 'package:laundry/controller/ui_controller/category/category_detalis.dart'
 import 'package:laundry/view/common_widget/common_button.dart';
 import 'package:laundry/view/common_widget/common_text_field.dart';
 import 'package:laundry/view/screen/cart/cart_screen%20.dart';
+import 'package:laundry/view/screen/cart/cart_screen.dart';
 import 'package:laundry/view/screen/category/widget/category_view_card.dart';
 
 class CategoryDetalis extends StatelessWidget {
